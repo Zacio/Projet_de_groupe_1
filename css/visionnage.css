@@ -1,3 +1,35 @@
-#videoVisionnage{border: solid;
-height: 600px;
-width: 400px;}
+#mainVisionnage{display: grid;
+grid-template-columns: 200px 1fr;
+grid-template-rows: 250px 1fr 150px;}
+
+#vMenubar{background-color: blue;
+grid-row: 1;
+grid-column: 1 / span 2;}
+
+#vLeftMenubar{background-color: blue;
+grid-row: 1 / span 3;
+grid-column: 1;}
+
+#vFooter{background-color: blue;
+grid-row: 3;
+grid-column: 1 / span 2;}
+
+#visionnage{background-color: aqua;
+grid-row: 2;
+grid-column: 2;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+display: inline-block;
+background-image: url(img/patesAnimaux.png);
+padding: 20px;
+}
+
+#videoVisionnage iframe{
+width: 900px; 
+height: 600px; 
+border: 20px solid yellow;
+margin: auto;
+display:block;
+}
+

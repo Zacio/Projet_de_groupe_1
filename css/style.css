@@ -1,6 +1,29 @@
 /* MODE PAR DEFAUT ou SCHEME LIGHT ou MODE CLAIR */
 :root, :root.clair 
 {
+<<<<<<< HEAD
+  --navBarGrad1:rgb(32, 33, 33);
+  --navBarGrad2: rgb(63, 63, 63);
+  --texteMax: rgb(20, 20, 20);
+  --texteMed:rgb(59, 63, 66);
+  --texteMin:rgb(84, 91, 99);
+=======
+  --backgroundNavBarnumero01: #fff6d9;
+  --backgroundNavBarnumero02: rgb(100, 100, 100);
+  --backgroundNavBarnumero03:#fff6d9;
+  --textNavBar: black;
+  --navLinkBackGround01: #fff6d9;
+  --navLinkABackground:#fffbee;
+
+  --texteMax: black;
+  --texteMin:lightslategrey;
+>>>>>>> 14a96d88e509b7fc6b888f45fd156f4fe58e2de2
+  --backgroundNavBarnumero01: #fff6d9;
+  --backgroundNavBarnumero02: rgb(100, 100, 100);
+  --backgroundNavBarnumero03:#fff6d9;
+  --textNavBar: black;
+  --navLinkBackGround01: #fff6d9;
+  --navLinkABackground:#fffbee; 
   --navBarGrad1:rgb(32, 33, 33);
   --navBarGrad2: rgb(63, 63, 63);
   --texteMax: rgb(20, 20, 20);
@@ -19,8 +42,18 @@
 {
   :root 
   {
+<<<<<<< HEAD
     --navBarGrad1:rgb(127, 128, 124);
     --navBarGrad2: rgb(219, 221, 213);
+=======
+    --backgroundNavBarnumero01: black;
+    --backgroundNavBarnumero02: rgb(100, 100, 100);
+    --textNavBar: #fff6d9;
+    --navLinkBackGround01: rgb(95, 95, 95);
+    --navLinkABackground:rgb(100, 100, 100);
+
+
+>>>>>>> 14a96d88e509b7fc6b888f45fd156f4fe58e2de2
     --texteMax: #fefefe;
     --texteMed: antiquewhite;
     --texteMin:bisque;
@@ -29,6 +62,13 @@
     --fondMin:rgb(23, 28, 32);
     --texteBleu: rgb(69, 89, 181);
     --bordureParagraphe: darkblue;
+    --backgroundNavBarnumero01: black;
+    --backgroundNavBarnumero02: rgb(100, 100, 100);
+    --textNavBar: #fff6d9;
+    --navLinkBackGround01: rgb(95, 95, 95);
+    --navLinkABackground:rgb(100, 100, 100);
+    --navBarGrad1:rgb(127, 128, 124);
+    --navBarGrad2: rgb(219, 221, 213);
   }
 }
 
@@ -36,17 +76,39 @@
 
 :root.sombre 
 {
+<<<<<<< HEAD
   --navBarGrad1:rgb(127, 128, 124);
   --navBarGrad2: rgb(219, 221, 213);
   --texteMax: #fefefe;
   --texteMed:antiquewhite;
   --texteMin:bisque;
   --fondMax: rgb(20, 20, 20);
+=======
+  --backgroundNavBarnumero01: black;
+  --backgroundNavBarnumero02: rgb(100, 100, 100);
+  --textNavBar: #fff6d9;
+  --navLinkBackGround01: rgb(95, 95, 95);
+  --navLinkABackground:rgb(100, 100, 100);
+
+  --texteMax:#fefefe;
+  --texteMin:rgb(223, 183, 130);
+  --fondMax: black;
+>>>>>>> 14a96d88e509b7fc6b888f45fd156f4fe58e2de2
   --fondMed: rgb(50, 54, 58);
   --fondMin:rgb(23, 28, 32);
   --texteBleu: rgb(69, 89, 181);
   --bordureParagraphe: darkblue;
-  
+  --backgroundNavBarnumero01: black;
+  --backgroundNavBarnumero02: rgb(100, 100, 100);
+  --textNavBar: #fff6d9;
+  --navLinkBackGround01: rgb(95, 95, 95);
+  --navLinkABackground:rgb(100, 100, 100);
+  --navBarGrad1:rgb(127, 128, 124);
+  --navBarGrad2: rgb(219, 221, 213);
+  --texteMax: #fefefe;
+  --texteMed:antiquewhite;
+  --texteMin:bisque;
+  --fondMax: rgb(20, 20, 20);
 }
 
 /* COMMANDES GLOBALES */
@@ -76,8 +138,12 @@ a:hover
   /* border:solid var(--texteMax) 5px; */
 /* } */
 
+<<<<<<< HEAD
 /*NavBar*/
 
+=======
+/*---------------------------------NavBar--------------------------------*/
+>>>>>>> 14a96d88e509b7fc6b888f45fd156f4fe58e2de2
 body{
   margin: 0;
   background-color: var(--fondMax);
@@ -88,7 +154,13 @@ body{
   z-index: 10;
   height: 200px;
   width: 100%;
+<<<<<<< HEAD
   background-image: linear-gradient(var(--navBarGrad2), var(--navBarGrad1));
+=======
+  background-image: linear-gradient(var(--backgroundNavBarnumero01), var(--backgroundNavBarnumero02));
+>>>>>>> 14a96d88e509b7fc6b888f45fd156f4fe58e2de2
+  background-color: linear-gradient(var(--navBarGrad2), var(--navBarGrad1));
+  /* background-image: linear-gradient(var(--backgroundNavBarnumero01), var(--backgroundNavBarnumero02)); */
   top: -150px;
   transition: 1s; 
 
@@ -109,7 +181,7 @@ body{
 
 /* #openbtn{
   text-decoration: none;
-  color: #fff6d9;
+  color: var(--textNavBar);
 }
 
 #openbtn:hover{
@@ -373,26 +445,40 @@ body{
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
+<<<<<<< HEAD
   color: var(--fondMed);
+=======
+  color: var(--textNavBar);
+>>>>>>> 14a96d88e509b7fc6b888f45fd156f4fe58e2de2
   display: block;
   transition: 0.3s;
 }
 .sideLink a:hover{
-  background-color: rgb(95, 95, 95);
+  background-color: var(--navLinkBackGround01);
 }
 
 #categorieSideCat{
   display: none;
   padding: 0%;
-  background-color: rgb(95, 95, 95);
+  background-color: var(--navLinkBackGround01);
   z-index: 1;
 }
 #categorieSideCat a:hover{
-  background-color: rgb(150, 150, 150);
+  background-color: var(--navLinkABackground);
 }
 #categorieNavBar:hover ~ #categorieSideCat , #categorieSideCat:hover{
   display: block;
 }
+/*-------------------------------NavBar---------------------------------*/
+
+
+/*-------------------------------footer---------------------------------*/
+footer{
+  width: 100%;
+  height: 200px;
+  background-image: linear-gradient(rgb(100, 100, 100), black(100, 100, 100));
+}
+/*-------------------------------footer---------------------------------*/
 
 /* FORMULAIRE */
 
@@ -482,7 +568,8 @@ input#checkbox {
   position: relative;
   display:flex;
   min-height: 100vh;
-  background-color: #334;     
+  background-color: #334;  
+  background-color: blue;    
 }
 
 .video-main {
@@ -491,7 +578,6 @@ input#checkbox {
   flex: 1 1 auto;
   width:max-content;
   justify-content: space-around;
-  margin-top: 50px;
   padding-left: 20px;
 }
 
@@ -503,6 +589,7 @@ input#checkbox {
   margin-top: 30px;
   margin-left: 20px;
   align-content: flex-start;
+  background-color: rgb(170, 170, 179);
   height: fit-content;
 }
 
@@ -512,6 +599,7 @@ input#checkbox {
   height:clamp(150px, 20vw, 170px);
   width:300px;
   margin:0 0 10px 0;
+  border: 2px solid rgb(145, 145, 145);
   border-radius: 5px;
   text-align: start;
 }
@@ -519,7 +607,7 @@ input#checkbox {
 
 .videos:hover {
   box-shadow: 0 0px 30px rgb(148, 147, 147);
-
+  overflow: hidden;
 }
 
 iframe {
@@ -542,18 +630,3 @@ iframe {
 /* } */
 
                                               /* Navigation */
-.navbar {
-    flex:none;
-    width:5px;
-    background-color: rgb(183, 183, 190);
-    overflow: hidden;
-    padding-top: 60px;
-}
-.navbar:hover, .navbar:active {
-    width:150px;
-    position: fixed;
-    height: 100%;
-}
-ul {
-  list-style-type: none;
-}
