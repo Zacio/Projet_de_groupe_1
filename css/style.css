@@ -1,13 +1,13 @@
 /* MODE PAR DEFAUT ou SCHEME LIGHT ou MODE CLAIR */
 :root, :root.clair 
 {
-<<<<<<< HEAD
+  
   --navBarGrad1:rgb(32, 33, 33);
   --navBarGrad2: rgb(63, 63, 63);
   --texteMax: rgb(20, 20, 20);
   --texteMed:rgb(59, 63, 66);
   --texteMin:rgb(84, 91, 99);
-=======
+
   --backgroundNavBarnumero01: #fff6d9;
   --backgroundNavBarnumero02: rgb(100, 100, 100);
   --backgroundNavBarnumero03:#fff6d9;
@@ -17,7 +17,7 @@
 
   --texteMax: black;
   --texteMin:lightslategrey;
->>>>>>> 14a96d88e509b7fc6b888f45fd156f4fe58e2de2
+
   --backgroundNavBarnumero01: #fff6d9;
   --backgroundNavBarnumero02: rgb(100, 100, 100);
   --backgroundNavBarnumero03:#fff6d9;
@@ -42,10 +42,10 @@
 {
   :root 
   {
-<<<<<<< HEAD
+
     --navBarGrad1:rgb(127, 128, 124);
     --navBarGrad2: rgb(219, 221, 213);
-=======
+
     --backgroundNavBarnumero01: black;
     --backgroundNavBarnumero02: rgb(100, 100, 100);
     --textNavBar: #fff6d9;
@@ -53,8 +53,9 @@
     --navLinkABackground:rgb(100, 100, 100);
 
 
->>>>>>> 14a96d88e509b7fc6b888f45fd156f4fe58e2de2
+
     --texteMax: #fefefe;
+
     --texteMed: antiquewhite;
     --texteMin:bisque;
     --fondMax: rgb(20, 20, 20);
@@ -76,14 +77,14 @@
 
 :root.sombre 
 {
-<<<<<<< HEAD
+
   --navBarGrad1:rgb(127, 128, 124);
   --navBarGrad2: rgb(219, 221, 213);
   --texteMax: #fefefe;
   --texteMed:antiquewhite;
   --texteMin:bisque;
   --fondMax: rgb(20, 20, 20);
-=======
+
   --backgroundNavBarnumero01: black;
   --backgroundNavBarnumero02: rgb(100, 100, 100);
   --textNavBar: #fff6d9;
@@ -93,7 +94,7 @@
   --texteMax:#fefefe;
   --texteMin:rgb(223, 183, 130);
   --fondMax: black;
->>>>>>> 14a96d88e509b7fc6b888f45fd156f4fe58e2de2
+
   --fondMed: rgb(50, 54, 58);
   --fondMin:rgb(23, 28, 32);
   --texteBleu: rgb(69, 89, 181);
@@ -138,12 +139,11 @@ a:hover
   /* border:solid var(--texteMax) 5px; */
 /* } */
 
-<<<<<<< HEAD
-/*NavBar*/
 
-=======
+
+
 /*---------------------------------NavBar--------------------------------*/
->>>>>>> 14a96d88e509b7fc6b888f45fd156f4fe58e2de2
+
 body{
   margin: 0;
   background-color: var(--fondMax);
@@ -154,12 +154,10 @@ body{
   z-index: 10;
   height: 200px;
   width: 100%;
-<<<<<<< HEAD
+  /* background-image: linear-gradient(var(--navBarGrad2), var(--navBarGrad1));
+  background-image: linear-gradient(var(--backgroundNavBarnumero01), var(--backgroundNavBarnumero02)); */
   background-image: linear-gradient(var(--navBarGrad2), var(--navBarGrad1));
-=======
-  background-image: linear-gradient(var(--backgroundNavBarnumero01), var(--backgroundNavBarnumero02));
->>>>>>> 14a96d88e509b7fc6b888f45fd156f4fe58e2de2
-  background-color: linear-gradient(var(--navBarGrad2), var(--navBarGrad1));
+
   /* background-image: linear-gradient(var(--backgroundNavBarnumero01), var(--backgroundNavBarnumero02)); */
   top: -150px;
   transition: 1s; 
@@ -437,7 +435,7 @@ body{
 
 .sideLink{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 120px; /*j'ai rajouté une colonne vide pour le bouton du theme (nico) */
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 120px; /*j'ai rajouté une colonne vide pour le bouton du theme (nico) */
   list-style: none;
 }
 .sideLink a{
@@ -445,11 +443,11 @@ body{
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-<<<<<<< HEAD
+
   color: var(--fondMed);
-=======
+
   color: var(--textNavBar);
->>>>>>> 14a96d88e509b7fc6b888f45fd156f4fe58e2de2
+
   display: block;
   transition: 0.3s;
 }
