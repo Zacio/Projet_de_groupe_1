@@ -215,3 +215,87 @@ input#checkbox {
 }
 
 /* FIN NICO DESK */
+
+/*tornike*/
+
+.container {
+  position: relative;
+  display:flex;
+  min-height: 100vh;
+  background-color: #334;     
+}
+
+.video-main {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  width:max-content;
+  justify-content: space-around;
+  margin-top: 50px;
+  padding-left: 20px;
+}
+
+.video-container {
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-rows: auto;
+  grid-gap:15px;
+  margin-top: 30px;
+  margin-left: 20px;
+  align-content: flex-start;
+  height: fit-content;
+}
+
+.videos {
+  cursor: pointer;
+  /* margin-bottom: 5px; */
+  height:clamp(150px, 20vw, 170px);
+  width:300px;
+  margin:0 0 10px 0;
+  border-radius: 5px;
+  text-align: start;
+}
+
+
+.videos:hover {
+  box-shadow: 0 0px 30px rgb(148, 147, 147);
+
+}
+
+iframe {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: .2s linear;
+}
+.videos:hover iframe {
+  transform: scale(1.1);
+  box-shadow: 0 0px 30px rgba(116, 111, 111, 0.3);
+}
+
+/* header { */
+  /* height: 50px; */
+  /* width: 100%; */
+  /* background-color: rgb(195, 195, 201); */
+  /* text-align: center; */
+  /* position: fixed; */
+/* } */
+
+                                              /* Navigation */
+.navbar {
+    margin-top: 139px;
+    flex:none;
+    width:5px;
+    background-color: rgb(183, 183, 190);
+    overflow: hidden;
+    padding-top: 60px;
+    height: 100vh;
+    top: -40;
+}
+.navbar:hover, .navbar:active {
+    width:150px;
+    height: 100vh;
+}
+ul {
+  list-style-type: none;
+}
