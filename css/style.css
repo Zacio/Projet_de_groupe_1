@@ -222,8 +222,7 @@ input#checkbox {
   position: relative;
   display:flex;
   min-height: 100vh;
-  background-color: #334;  
-  background-color: blue;    
+  background-color: #334;     
 }
 
 .video-main {
@@ -232,6 +231,7 @@ input#checkbox {
   flex: 1 1 auto;
   width:max-content;
   justify-content: space-around;
+  margin-top: 50px;
   padding-left: 20px;
 }
 
@@ -243,7 +243,6 @@ input#checkbox {
   margin-top: 30px;
   margin-left: 20px;
   align-content: flex-start;
-  background-color: rgb(170, 170, 179);
   height: fit-content;
 }
 
@@ -253,7 +252,6 @@ input#checkbox {
   height:clamp(150px, 20vw, 170px);
   width:300px;
   margin:0 0 10px 0;
-  border: 2px solid rgb(145, 145, 145);
   border-radius: 5px;
   text-align: start;
 }
@@ -261,7 +259,7 @@ input#checkbox {
 
 .videos:hover {
   box-shadow: 0 0px 30px rgb(148, 147, 147);
-  overflow: hidden;
+
 }
 
 iframe {
@@ -284,3 +282,18 @@ iframe {
 /* } */
 
                                               /* Navigation */
+.navbar {
+    flex:none;
+    width:5px;
+    background-color: rgb(183, 183, 190);
+    overflow: hidden;
+    padding-top: 60px;
+}
+.navbar:hover, .navbar:active {
+    width:150px;
+    position: fixed;
+    height: 100%;
+}
+ul {
+  list-style-type: none;
+}
