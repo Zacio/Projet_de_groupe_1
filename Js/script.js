@@ -6,31 +6,31 @@
 
 function themeSwap() {
 
-  const bjbn = document.querySelector('.bjbn')
+  //const bjbn = document.querySelector('.bjbn')
 
   if (document.documentElement.classList.contains("clair")) { 
 
     document.documentElement.classList.add("sombre")
     document.documentElement.classList.remove("clair")    
-    bjbn.innerHTML = "Bonne nuit !"
+    //bjbn.innerHTML = "Bonne nuit !"
 
       } else if (document.documentElement.classList.contains("sombre")) {
-
-      bjbn.innerHTML = "Bonjour !"     
+         
       document.documentElement.classList.add("clair")
-      document.documentElement.classList.remove("sombre") 
+      document.documentElement.classList.remove("sombre")
+      //bjbn.innerHTML = "Bonjour !" 
 
           } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
 
             document.documentElement.classList.add("sombre")
             document.documentElement.classList.remove("clair")
-            bjbn.innerHTML = "Bonne nuit !"
+            //bjbn.innerHTML = "Bonne nuit !"
 
               } else { 
 
               document.documentElement.classList.add("clair")
               document.documentElement.classList.remove("sombre")
-              bjbn.innerHTML = "Bonjour !"
+              //bjbn.innerHTML = "Bonjour !"
                            
               }
 }         
@@ -66,8 +66,9 @@ function themeSwapDesk() {
               }
 }         
 
-//Micael
+//Micael ajout flechenav (nico)
 var sidenav = document.getElementById("mySidenav")
+var flechenav = document.getElementById("ouvrezMoi")
 var opentest = document.getElementById("openbtn")
 var closetest = document.getElementById("closebtn")
 
@@ -77,9 +78,11 @@ opentest.onclick = openandclosenav;
 function openandclosenav(){
     if(sidenav.classList.contains("ok")){
         sidenav.classList.remove("ok")
+        flechenav.classList.remove("ok")
     }
     else{
         sidenav.classList.add("ok")
+        flechenav.classList.add("ok")
     }
 }
 

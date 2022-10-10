@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,36 +8,57 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+
+<body onload="themeSwap()">
     <header>
         <nav>
+
+            <!-- BOUTON THEME SOMBRE DEBUT (Nico) -->
+            <div id="themeBox">
+                <input id="themeCheck" type="checkbox" value="None" name="themeCheck" onchange="themeSwap()">
+                <label id="themeLabel" for="themeCheck">
+                    <div class="moon"></div>
+                    <div class="sun"></div>
+                    <div class="curseur"></div>
+                </label>
+            </div>
+            <!-- BOUTON THEME SOMBRE FIN (Nico) -->
+
             <div id="mySidenav" class="sidenav">
                 <ul class="sideLink">
                     <li><a href="index.html" class="sideNavLienPrincipale">Bonjour</a></li>
                     <li><a href="categorie" class="sideNavLienPrincipale" id="categorieNavBar">Bonjour v</a>
-                    <ul id="categorieSideCat">
-                        <a href="animal.html">Animaux</a>
-                        <a href="dessin_anime.html">Déssin animé</a>
-                        <a href="horreur.html">Horreur</a>
-                        <a href="#">sport</a>
-                    </ul>
+                        <ul id="categorieSideCat">
+                            <a href="animal.html">Animaux</a>
+                            <a href="dessin_anime.html">Déssin animé</a>
+                            <a href="horreur.html">Horreur</a>
+                            <a href="#">sport</a>
+                        </ul>
 
                     </li>
                     <li><a href="desk.html" class="sideNavLienPrincipale">desk</a></li>
                     <li><a href="#" class="sideNavLienPrincipale">Bonjour</a></li>
                 </ul>
-    
+
                 <div class="openbtn">
-                    <p id="openbtn">
-                            V
-                    </p>
+                    <div id="openbtn">
+                        <!-- DEBUT FLECHES ANIMEES (AJOUT NICOM)-->
+                        <div id="ouvrezMoi" class="boiteFleche">
+                            <div class="flecheNavbarA"></div>
+                            <div class="flecheNavbarB"></div>
+                            <div class="flecheNavbarC"></div>
+                        </div>
+                        <!-- FIN FLECHES ANIMEES -->
+                    </div>
                 </div>
             </div>
         </nav>
+
     </header>
     <div id="test">
 
     </div>
     <script src="Js/script.js"></script>
 </body>
+
 </html>
