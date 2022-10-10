@@ -531,12 +531,12 @@ input#checkbox {
   display: flex;
   justify-content: center;
   perspective: 2000px;
-  perspective-origin:bottom;
+  perspective-origin: bottom left;
 }
 
 .bureauImage 
 {
-  background-image:url('../img/desk1.png');
+  background-image:url('../img/bureauT.png');
   background-repeat: no-repeat;
   background-position:bottom center;
   background-size: 75%;
@@ -546,18 +546,41 @@ input#checkbox {
 
 .bureauForm
 {
-  opacity: 0.5;
+
   position:absolute;
-  bottom:clamp(0px, 18vw, 225px);
-  height:clamp(68px, 15vw, 250px);
-  width:clamp(159px, 30vw, 530px);
-  transform-style:preserve-3d;
-  transform: rotateX(62deg) rotateY(0deg) rotateZ(-29deg) translateX(-2vw) translateY(-4vw) translateZ(0vw) skewX(10deg) skewY(0deg);
+  bottom:clamp(150px, 30vw, 300px);
+  height:clamp(50px, 15vw, 300px);
+  width:clamp(125px, 50vw, 600px);
+  transform-style:preserve-3d; 
+  
   text-transform: uppercase;
-  font-size:clamp(15px, 3vw, 25px);
+  font-size:clamp(10px, 2.5vw, 30px);
   font-weight: bold;    
 }
 
+.bureauForm .pseudo 
+{
+transform: rotateX(45deg) rotateY(15deg) rotateZ(-33deg) translateX(-5vw) translateY(0vw) translateZ(-5vw) skewX(30deg) skewY(0deg);
+transform-style: preserve-3d;
+}
+
+.bureauForm .mdpasse 
+{
+transform-style: preserve-3d;
+transform: rotateX(45deg) rotateY(15deg) rotateZ(-33deg) translateX(-3vw) translateY(3.5vw) translateZ(0vw) skewX(30deg) skewY(0deg);
+}
+
+.bureauForm .souvenir 
+{
+transform-style: preserve-3d;
+transform: rotateX(45deg) rotateY(15deg) rotateZ(-32deg) translateX(8vw) translateY(1.3vw) translateZ(0vw) skewX(30deg) skewY(0deg);
+}
+
+.bureauForm .souvenir input 
+{
+  height:30px;
+  width:30px;
+}
 /* FIN NICO DESK */
 
 /*tornike*/
