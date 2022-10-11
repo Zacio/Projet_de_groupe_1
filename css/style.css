@@ -1,7 +1,6 @@
 /* MODE PAR DEFAUT ou SCHEME LIGHT ou MODE CLAIR */
 :root, :root.clair 
 {
-  
   --navBarGrad1:rgb(32, 33, 33);
   --navBarGrad2: rgb(63, 63, 63);
   --texteMax: rgb(20, 20, 20);
@@ -9,6 +8,7 @@
   --texteMin:rgb(84, 91, 99);
 
   /*-----------------nav & footer------------------*/
+  --logoImageBackground:url(../img/logo2.1.png);
   --backgroundNavBarnumero01: #fff6d9;
   --backgroundNavBarnumero02: rgb(200, 200, 200);
   --backgroundNavBarnumero03:#fff6d9;
@@ -38,6 +38,8 @@
     --navBarGrad2: rgb(219, 221, 213);
 
   /*-----------------nav & footer------------------*/
+    --logoImageBackground:url(../img/logo1.1.png);
+
     --backgroundNavBarnumero01: black;
     --backgroundNavBarnumero02: rgb(100, 100, 100);
     --textNavBar: #fff6d9;
@@ -73,6 +75,7 @@
   --fondMax: rgb(20, 20, 20);
 
   /*-----------------nav & footer------------------*/
+  --logoImageBackground:url(../img/logo1.1.png);
   --backgroundNavBarnumero01: black;
   --backgroundNavBarnumero02: rgb(100, 100, 100);
   --textNavBar: #fff6d9;
@@ -121,26 +124,39 @@ a:hover
 
 
 /*---------------------------------NavBar--------------------------------*/
-
+.pcTuneBaniere{
+  margin: 0px;
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  background-color: var(--backgroundNavBarnumero01);
+  top: 0px;
+  z-index: 10;
+}
+.logo{
+  background-image: var(--logoImageBackground);
+  background-position: center left 50px;
+  background-repeat: no-repeat;
+  height: 100px;
+}
 body{
-  margin: 0;
-  margin-top: 50px;
+  margin: 0px;
   background-color: var(--fondMax);
 }
-
+.navhiden{
+  z-index: 5;
+  width: 100%;
+  height: 150px;
+  background-color: aquamarine;
+}
 .sidenav{
   position: fixed;
-  z-index: 10;
+  z-index: 5;
   height: 200px;
   width: 100%;
   background-image: linear-gradient(var(--backgroundNavBarnumero01), var(--backgroundNavBarnumero02));
-  top: -150px;
+  top: 0px;
   transition: 1s; 
-
-}
-
-.sidenav.ok{
-  top: 0;  
 }
 
 .openbtn{
@@ -453,17 +469,18 @@ body{
     margin-top: 0px;
     background-color: var(--fondMax);
   }
+
+  /*----------menu burger------------*/
   .burger-icon{
     position: fixed;
     z-index: 11;
-
   }
 
   .burger-icon span {
     display: block;
     width: 35px;
     height: 5px;
-    background-color: black;
+    background-color: var(--textNavBar);
     margin: 6px 10px;
     cursor: pointer;
     transition: 0.3s linear;
@@ -505,11 +522,12 @@ body{
     border-radius: 40%;
 
   }
+  /*----------menu burger------------*/
 
   .sidenav{
     position: fixed;
-    z-index: 10;
-    height: 100%;
+    z-index: 4;
+    height: 90%;
     width: 100%;
     background-color: var(--backgroundNavBarnumero02);
     background-image: none;
@@ -518,7 +536,7 @@ body{
   }
   
   .sidenav.ok{
-    top: 0%;  
+    top: 100px;
   }
   
   .openbtn{
@@ -661,7 +679,7 @@ body{
   }
   .sideLink li{
     flex: 1 1 auto;
-    margin: 5% 0%;
+    margin: 0% 0%;
   }
   .sideLink a{
     text-align: center;
