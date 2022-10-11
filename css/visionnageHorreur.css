@@ -1,0 +1,116 @@
+#mainVisionnage{display: grid;
+grid-template-columns: 200px 1fr;
+grid-template-rows: 250px 1fr 150px;
+}
+
+#vMenubar{background-color: blue;
+grid-row: 1;
+grid-column: 1 / span 2;
+}
+
+#vLeftMenubar{background-color: blue;
+grid-row: 1 / span 3;
+grid-column: 1;
+}
+
+#vFooter{background-color: blue;
+grid-row: 3;
+grid-column: 1 / span 2;
+}
+
+#visionnage{display: flex;
+flex-direction: column;
+padding: 15px;
+background-image: url(../img/backHorreur.jpg);
+font-family: Leoscar;
+letter-spacing: 1px;
+}
+
+#videoVisionnage{align-self: center;}
+
+#descriptVisionnage{display: flex;
+}
+
+h1{font-size: 40px;}
+
+h1, h2, h3{display: inline;
+background-color: darkred;
+border-radius: 5px 10px 0 5px;
+justify-content: flex-start;
+}
+
+.paragraphe{background-color: #fae4e6;
+border-radius: 5px 10px 0 5px;
+}
+
+label{background-color: darkred;
+border-radius: 5px 10px 0 5px;
+}
+input{background-color: ;}
+
+#boutonHorreur{
+display: flex;
+justify-content: center;
+align-items: center;
+position: absolute;
+transition: all 1s;
+right: 23px;
+border-radius: 0 10px 0 0;
+background-color:darkred ;
+border: solid black 2px;
+color:black;
+width: 120px;
+height: 60px;
+font-size: 30px;
+font-weight: bold;
+}
+
+#boutonHorreur::before{
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 0 10px 0 0;
+cursor:pointer;
+background-color:#fae4e6;
+position: absolute;
+top:50%;
+left: 50%;
+transform: translate(-50%, -50%);
+transition: all 1s;
+content:"Horreur";
+width: 0%;
+height: 100%;
+z-index: 1;
+}
+
+#boutonHorreur:hover::before {
+width: 100%;
+} 
+
+
+
+/* .buttonHorreurVisionnage{float: right;
+background-color: darkred;
+border-radius: 0 10px 0 0;
+width:150px;
+line-height:50px;
+text-align:center;
+vertical-align:middle;
+font-family: Leoscar;
+font-style: bold;
+font-size: 30px;
+letter-spacing: 1px;
+} */
+
+textarea{background-color: #fae4e6;
+    border-radius: 5px 10px 0 5px;}
+
+
+
+@media only screen and (max-width:320px)
+{}
+
+@font-face {
+    font-family: Leoscar;
+    src: url(../fonts/Leoscar.ttf);
+}
