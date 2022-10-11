@@ -21,7 +21,7 @@
     #visionnage{display: flex;
     flex-direction: column;
     padding: 15px;
-    background-image: url(../img/backAnimaux.jpg);
+    background-image: url(../img/backDessinanimé.jpg);
     font-family: Leoscar;
     letter-spacing: 1px;
     }
@@ -34,21 +34,21 @@
     h1{font-size: 40px;}
     
     h1, h2, h3{display: inline;
-    background-color: greenyellow;
+    background-color: pink;
     border-radius: 5px 10px 0 5px;
     justify-content: flex-start;
     }
     
-    .paragraphe{background-color: #80e38d;
+    .paragraphe{background-color: #f3cbea;
     border-radius: 5px 10px 0 5px;
     }
     
-    label{background-color: greenyellow;
+    label{background-color: pink;
     border-radius: 5px 10px 0 5px;
     }
-    input{background-color:#80e38d;}
+    input{background-color:#f3cbea;}
     
-    #boutonAnimaux{
+    #boutonDessinAnime{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,7 +56,7 @@
     transition: all 1s;
     right: 23px;
     border-radius: 0 10px 0 0;
-    background-color:greenyellow ;
+    background-color:pink ;
     border: solid black 2px;
     color:black;
     width: 120px;
@@ -65,25 +65,25 @@
     font-weight: bold;
     }
     
-    #boutonAnimaux::before{
+    #boutonDessinAnime::before{
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 0 10px 0 0;
     cursor:pointer;
-    background-color:#80e38d;
+    background-color:#f3cbea;
     position: absolute;
     top:50%;
     left: 50%;
     transform: translate(-50%, -50%);
     transition: all 1s;
-    content:"Animaux";
+    content:"Dessin animé";
     width: 0%;
     height: 100%;
     z-index: 1;
     }
     
-    #boutonAnimaux:hover::before {
+    #boutonDessinAnime:hover::before {
     width: 100%;
     } 
     
@@ -102,7 +102,7 @@
     letter-spacing: 1px;
     } */
     
-    textarea{background-color: #80e38d;
+    textarea{background-color: #f3cbea;
         border-radius: 5px 10px 0 5px;}
     
     
