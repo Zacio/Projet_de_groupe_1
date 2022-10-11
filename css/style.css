@@ -466,39 +466,42 @@ body{
     background-color: black;
     margin: 6px 10px;
     cursor: pointer;
-    transition: 0.5s linear;
+    transition: 0.3s linear;
   }
   .burgerBar1{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -10px);
+    transform: translate(-20%, -10px);
+    border-radius: 30% 30% 0px 0px;
   }
   .burgerBar2{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 0px);
+    transform: translate(-20%, 0px);
+    border-radius: 0%;
   }
   .burgerBar3{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 10px);
+    transform: translate(-20%, 10px);
+    border-radius: 0px 0px 30% 30%;
   }
 
   .burger-icon.ok .burgerBar1{
-    transform: rotate(60deg);
+    transform:translate(-20%, -0px) rotate(45deg);
     border-radius: 40%;
 
 
   }
   .burger-icon.ok .burgerBar2{
-    left: -40px;
+    width: 0px;
     border-radius: 100%;
   }
   .burger-icon.ok .burgerBar3{
-    transform: rotate(-60deg);
+    transform: translate(-20%, 0px) rotate(-45deg);
     border-radius: 40%;
 
   }
