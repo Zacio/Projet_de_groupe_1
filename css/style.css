@@ -1,11 +1,36 @@
 /* MODE PAR DEFAUT ou SCHEME LIGHT ou MODE CLAIR */
 :root, :root.clair 
 {
-  --backgroundNavBar:
+  
+  --navBarGrad1:rgb(32, 33, 33);
+  --navBarGrad2: rgb(63, 63, 63);
+  --texteMax: rgb(20, 20, 20);
+  --texteMed:rgb(59, 63, 66);
+  --texteMin:rgb(84, 91, 99);
+
+  --backgroundNavBarnumero01: #fff6d9;
+  --backgroundNavBarnumero02: rgb(100, 100, 100);
+  --backgroundNavBarnumero03:#fff6d9;
+  --textNavBar: black;
+  --navLinkBackGround01: #fff6d9;
+  --navLinkABackground:#fffbee;
+
   --texteMax: black;
   --texteMin:lightslategrey;
+
+  --backgroundNavBarnumero01: #fff6d9;
+  --backgroundNavBarnumero02: rgb(100, 100, 100);
+  --backgroundNavBarnumero03:#fff6d9;
+  --textNavBar: black;
+  --navLinkBackGround01: #fff6d9;
+  --navLinkABackground:#fffbee; 
+  --navBarGrad1:rgb(32, 33, 33);
+  --navBarGrad2: rgb(63, 63, 63);
+  --texteMax: rgb(20, 20, 20);
+  --texteMed:rgb(59, 63, 66);
+  --texteMin:rgb(84, 91, 99);
   --fondMax: #fefefe;
-  --fondMed: rgb(178, 178, 178);
+  --fondMed: rgb(235, 236, 219);
   --fondMin: rgb(223, 183, 130);
   --texteBleu: rgb(24, 46, 216);
   --bordureParagraphe: lightblue;
@@ -17,13 +42,34 @@
 {
   :root 
   {
+
+    --navBarGrad1:rgb(127, 128, 124);
+    --navBarGrad2: rgb(219, 221, 213);
+
+    --backgroundNavBarnumero01: black;
+    --backgroundNavBarnumero02: rgb(100, 100, 100);
+    --textNavBar: #fff6d9;
+    --navLinkBackGround01: rgb(95, 95, 95);
+    --navLinkABackground:rgb(100, 100, 100);
+
+
+
     --texteMax: #fefefe;
-    --texteMin:rgb(223, 183, 130);
-    --fondMax: black;
+
+    --texteMed: antiquewhite;
+    --texteMin:bisque;
+    --fondMax: rgb(20, 20, 20);
     --fondMed:rgb(50, 54, 58);
     --fondMin:rgb(23, 28, 32);
     --texteBleu: rgb(69, 89, 181);
     --bordureParagraphe: darkblue;
+    --backgroundNavBarnumero01: black;
+    --backgroundNavBarnumero02: rgb(100, 100, 100);
+    --textNavBar: #fff6d9;
+    --navLinkBackGround01: rgb(95, 95, 95);
+    --navLinkABackground:rgb(100, 100, 100);
+    --navBarGrad1:rgb(127, 128, 124);
+    --navBarGrad2: rgb(219, 221, 213);
   }
 }
 
@@ -31,14 +77,39 @@
 
 :root.sombre 
 {
+
+  --navBarGrad1:rgb(127, 128, 124);
+  --navBarGrad2: rgb(219, 221, 213);
   --texteMax: #fefefe;
+  --texteMed:antiquewhite;
+  --texteMin:bisque;
+  --fondMax: rgb(20, 20, 20);
+
+  --backgroundNavBarnumero01: black;
+  --backgroundNavBarnumero02: rgb(100, 100, 100);
+  --textNavBar: #fff6d9;
+  --navLinkBackGround01: rgb(95, 95, 95);
+  --navLinkABackground:rgb(100, 100, 100);
+
+  --texteMax:#fefefe;
   --texteMin:rgb(223, 183, 130);
   --fondMax: black;
+
   --fondMed: rgb(50, 54, 58);
   --fondMin:rgb(23, 28, 32);
   --texteBleu: rgb(69, 89, 181);
   --bordureParagraphe: darkblue;
-  
+  --backgroundNavBarnumero01: black;
+  --backgroundNavBarnumero02: rgb(100, 100, 100);
+  --textNavBar: #fff6d9;
+  --navLinkBackGround01: rgb(95, 95, 95);
+  --navLinkABackground:rgb(100, 100, 100);
+  --navBarGrad1:rgb(127, 128, 124);
+  --navBarGrad2: rgb(219, 221, 213);
+  --texteMax: #fefefe;
+  --texteMed:antiquewhite;
+  --texteMin:bisque;
+  --fondMax: rgb(20, 20, 20);
 }
 
 /* COMMANDES GLOBALES */
@@ -68,9 +139,14 @@ a:hover
   /* border:solid var(--texteMax) 5px; */
 /* } */
 
-/*NavBar*/
+
+
+
+/*---------------------------------NavBar--------------------------------*/
+
 body{
   margin: 0;
+  background-color: var(--fondMax);
 }
 
 .sidenav{
@@ -78,14 +154,20 @@ body{
   z-index: 10;
   height: 200px;
   width: 100%;
-  background-image: linear-gradient(black, rgb(100, 100, 100));
+  /* background-image: linear-gradient(var(--navBarGrad2), var(--navBarGrad1));
+  background-image: linear-gradient(var(--backgroundNavBarnumero01), var(--backgroundNavBarnumero02)); */
+  background-image: linear-gradient(var(--navBarGrad2), var(--navBarGrad1));
+
+  /* background-image: linear-gradient(var(--backgroundNavBarnumero01), var(--backgroundNavBarnumero02)); */
   top: -150px;
-  transition: 1s;
-  
+  transition: 1s; 
+
 }
+
 .sidenav.ok{
-  top: 0;
+  top: 0;  
 }
+
 .openbtn{
   width: 100%;
   height: 50px;
@@ -94,18 +176,266 @@ body{
   bottom: 0;
   text-align: center;
 }
-#openbtn{
+
+/* #openbtn{
   text-decoration: none;
-  color: #fff6d9;
+  color: var(--textNavBar);
 }
+
 #openbtn:hover{
   cursor: pointer;
   color: lightgray;
+} */
+
+/*BOUTON THEME SOMBRE DEBUT */
+
+/* CONFIGURATION DU BOUTON DE THEME (Nico) */
+
+#themeCheck
+{
+  visibility: hidden;
 }
+
+#themeBox 
+{    
+  background-color: lightslategray;
+  border:black solid 2px;
+  position:absolute;
+  top:3px;
+  right:3px;
+  width: 100px;
+  height: 40px;
+  border-radius:55px;
+  z-index: 11;	
+}
+
+#themeBox label
+{
+  visibility: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 100px;
+  height: 40px;	
+  border-radius: 55px;
+  cursor: pointer;	
+}
+
+#themeLabel .curseur 
+{
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-83%, -50%);
+  z-index: 1;
+  width: 54px;
+  height: 32px;	
+  border-radius: 50px;
+  background-color:var(--fondMax);
+  border:solid var(--texteMed) 2px;
+  transition:0.5s;	
+}
+
+#themeCheck:checked ~ #themeLabel .curseur 
+{
+  transform: translate(-17%, -50%);
+}
+
+#themeLabel .sun 
+{
+  background-image:url('../img/soleil.png');
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-150%, -50%);
+  background-size:contain;
+  height: 30px;
+  width:30px;
+}
+
+#themeLabel .moon 
+{
+	  background-image:url('../img/lune.png');
+	  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(50%, -50%);
+    background-size:contain;
+    height: 30px;
+    width:30px;
+}
+
+/*BOUTON THEME SOMBRE FIN */
+
+/*DEBUT ANIMATION FLECHE NICO */
+
+/* BOITE INVISIBLE QUI CONTIENT LES 3 FLECHES ANIMEES */
+
+#ouvrezMoi
+{
+    display: hidden;
+    position:absolute;
+    top:25px;
+    left:50%;
+    transform:translate(-50%, -50%);
+    cursor:pointer;
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+}
+
+.boiteFleche.ok
+{
+    top:175px;
+}
+
+/* TROIS FLECHES */
+
+.boiteFleche .flecheNavbarA
+{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:10px;
+    height:10px;
+    border:solid var(--fondMed);
+    transform:translate(-50%, -100%) rotate(45deg);
+    border-width:0px 3px 3px 0px;
+    transition: 1s;
+        
+}
+
+.boiteFleche.ok .flecheNavbarA
+{
+  transition: 1s;
+  transform:translate(-50%, 0%) rotate(225deg); 
+}
+
+.boiteFleche .flecheNavbarB
+{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:10px;
+    height:10px;
+    border:solid var(--fondMed);
+    transform:translate(-50%, -50%) rotate(45deg);
+    border-width:0px 3px 3px 0px;
+    transition: 1s ease-in;
+        
+}
+
+.boiteFleche.ok .flecheNavbarB
+{ 
+  transition: 1s ease-in;
+  transform:translate(-50%, -50%) rotate(225deg);
+}
+
+.boiteFleche .flecheNavbarC
+{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:10px;
+    height:10px;
+    border:solid var(--fondMed);
+    transform:translate(-50%, 0%) rotate(45deg);
+    border-width:0px 3px 3px 0px;
+    transition: 1s ease-in;
+        
+}
+
+.boiteFleche.ok .flecheNavbarC
+{
+  transition: 1s ease-in;
+  transform:translate(-50%, -100%) rotate(225deg);
+}
+
+/* KEYFRAMES FLECHES */
+
+@keyframes navbarA {
+    0% {opacity:0;}
+    6.25% {opacity:0.33;}
+    12.5% {opacity:0.66;}
+    18.75% {opacity:0.66;}
+    25% {opacity:1;}
+    31.25% {opacity:1;}
+    37.5% {opacity:0.66;}
+    43.75% {opacity:0.66;}
+    50% {opacity:0.33;}
+    56.25% {opacity:0;}
+    62.5% {opacity:0;} 
+    68.75% {opacity:0;}
+    75% {opacity:0;}
+    81.25% {opacity:0;}
+    87.5% {opacity:0;}
+    93.75% {opacity:0;}
+    100% {opacity:0;}               
+}
+
+@keyframes navbarB {
+    0% {opacity:0;}
+    6.25% {opacity:0;}
+    12.5% {opacity:0;}
+    18.75% {opacity:0;}
+    25% {opacity:0;}
+    31.25% {opacity:0.33;}
+    37.5% {opacity:0.66;}
+    43.75% {opacity:0.66;}
+    50% {opacity:1;}
+    56.25% {opacity:1;}
+    62.5% {opacity:0.66;} 
+    68.75% {opacity:0.66;}
+    75% {opacity:0.33;}
+    81.25% {opacity:0;}
+    87.5% {opacity:0;}
+    93.75% {opacity:0;}
+    100% {opacity:0;}       
+}
+
+@keyframes navbarC {
+    0% {opacity:0;}
+    6.25% {opacity:0;}
+    12.5% {opacity:0;}
+    18.75% {opacity:0;}
+    25% {opacity:0;}
+    31.25% {opacity:0;}
+    37.5% {opacity:0;}
+    43.75% {opacity:0;}
+    50% {opacity:0;}
+    56.25% {opacity:0.33;}
+    62.5% {opacity:0.66;} 
+    68.75% {opacity:0.66;}
+    75% {opacity:1;}
+    81.25% {opacity:1;}
+    87.5% {opacity:0.66;}
+    93.75% {opacity:0.66;}
+    100% {opacity:0.33;}        
+}
+
+.flecheNavbarA
+{
+    animation: 3s linear infinite navbarA;               
+}
+
+.flecheNavbarB
+{
+    animation: 3s linear infinite navbarB;              
+
+}
+
+.flecheNavbarC
+{
+    animation: 3s linear infinite navbarC;           
+}
+
+/* FIN ANIMATION FLECHE NICO */
 
 .sideLink{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 120px; /*j'ai rajouté une colonne vide pour le bouton du theme (nico) */
   list-style: none;
 }
 .sideLink a{
@@ -113,26 +443,40 @@ body{
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #fff6d9;
+
+  color: var(--fondMed);
+
+  color: var(--textNavBar);
+
   display: block;
   transition: 0.3s;
 }
 .sideLink a:hover{
-  background-color: rgb(95, 95, 95);
+  background-color: var(--navLinkBackGround01);
 }
 
 #categorieSideCat{
   display: none;
   padding: 0%;
-  background-color: rgb(95, 95, 95);
+  background-color: var(--navLinkBackGround01);
   z-index: 1;
 }
 #categorieSideCat a:hover{
-  background-color: rgb(150, 150, 150);
+  background-color: var(--navLinkABackground);
 }
 #categorieNavBar:hover ~ #categorieSideCat , #categorieSideCat:hover{
   display: block;
 }
+/*-------------------------------NavBar---------------------------------*/
+
+
+/*-------------------------------footer---------------------------------*/
+footer{
+  width: 100%;
+  height: 200px;
+  background-image: linear-gradient(rgb(100, 100, 100), black(100, 100, 100));
+}
+/*-------------------------------footer---------------------------------*/
 
 /* FORMULAIRE */
 
@@ -187,12 +531,12 @@ input#checkbox {
   display: flex;
   justify-content: center;
   perspective: 2000px;
-  perspective-origin:bottom;
+  perspective-origin: bottom left;
 }
 
 .bureauImage 
 {
-  background-image:url('../img/desk1.png');
+  background-image:url('../img/bureauT.png');
   background-repeat: no-repeat;
   background-position:bottom center;
   background-size: 75%;
@@ -202,18 +546,41 @@ input#checkbox {
 
 .bureauForm
 {
-  opacity: 0.5;
+
   position:absolute;
-  bottom:clamp(0px, 18vw, 225px);
-  height:clamp(68px, 15vw, 250px);
-  width:clamp(159px, 30vw, 530px);
-  transform-style:preserve-3d;
-  transform: rotateX(62deg) rotateY(0deg) rotateZ(-29deg) translateX(-2vw) translateY(-4vw) translateZ(0vw) skewX(10deg) skewY(0deg);
+  bottom:clamp(150px, 30vw, 300px);
+  height:clamp(50px, 15vw, 300px);
+  width:clamp(125px, 50vw, 600px);
+  transform-style:preserve-3d; 
+  
   text-transform: uppercase;
-  font-size:clamp(15px, 3vw, 25px);
+  font-size:clamp(10px, 2.5vw, 30px);
   font-weight: bold;    
 }
 
+.bureauForm .pseudo 
+{
+transform: rotateX(45deg) rotateY(15deg) rotateZ(-33deg) translateX(-5vw) translateY(0vw) translateZ(-5vw) skewX(30deg) skewY(0deg);
+transform-style: preserve-3d;
+}
+
+.bureauForm .mdpasse 
+{
+transform-style: preserve-3d;
+transform: rotateX(45deg) rotateY(15deg) rotateZ(-33deg) translateX(-3vw) translateY(3.5vw) translateZ(0vw) skewX(30deg) skewY(0deg);
+}
+
+.bureauForm .souvenir 
+{
+transform-style: preserve-3d;
+transform: rotateX(45deg) rotateY(15deg) rotateZ(-32deg) translateX(8vw) translateY(1.3vw) translateZ(0vw) skewX(30deg) skewY(0deg);
+}
+
+.bureauForm .souvenir input 
+{
+  height:30px;
+  width:30px;
+}
 /* FIN NICO DESK */
 
 /*tornike*/
@@ -222,7 +589,8 @@ input#checkbox {
   position: relative;
   display:flex;
   min-height: 100vh;
-  background-color: #334;     
+  background-color: #334;  
+  background-color: blue;    
 }
 
 .video-main {
@@ -234,6 +602,7 @@ input#checkbox {
   margin: 50px;
 
 
+  padding-left: 20px;
 }
 
 .video-container {
@@ -244,6 +613,7 @@ input#checkbox {
   margin-top: 30px;
   margin-left: 20px;
   align-content: flex-start;
+  background-color: rgb(170, 170, 179);
   height: fit-content;
   margin-bottom: 50px;
 }
@@ -254,11 +624,17 @@ input#checkbox {
   height:clamp(150px, 20vw, 170px);
   width:300px;
   margin:0 0 10px 0;
+  border: 2px solid rgb(145, 145, 145);
+  border-radius: 5px;
   text-align: start;
 }
 
 
 
+.videos:hover {
+  box-shadow: 0 0px 30px rgb(148, 147, 147);
+  overflow: hidden;
+}
 
 iframe {
   height: 100%;
