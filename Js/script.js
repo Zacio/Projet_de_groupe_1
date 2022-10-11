@@ -67,6 +67,7 @@ function themeSwapDesk() {
 }         
 
 //Micael ajout flechenav (nico)
+
 var sidenav = document.getElementById("mySidenav")
 var flechenav = document.getElementById("ouvrezMoi")
 var opentest = document.getElementById("openbtn")
@@ -87,7 +88,7 @@ function openandclosenav(){
 }
 
 
-//Tornike 
+//Tornike// 
 
 
 
