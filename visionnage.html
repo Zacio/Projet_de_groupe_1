@@ -12,7 +12,7 @@
     <div id="vMenubar"></div>
     <div id="vLeftMenubar"></div>
         <Section id="visionnage">
-            <!--Vidéo à visionner-->
+             <!--Vidéo à visionner-->
             <div id="videoVisionnage">
                 <iframe width="1268" height="713" src="https://www.youtube.com/embed/TiRDYKiz8EM" title="Le cochon (documentaire)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
@@ -21,13 +21,27 @@
             <h1>Le Cochon</h1>
 
             <!--description de la vidéo à visionner-->
-            <div id="decriptVisionnage"><p>Documentaire sur les cochons et ses cousins phacochères</p></div>
+            <div id="decriptVisionnage">
+                <h2>Description</h2>
+                <p>Documentaire sur les cochons et ses cousins phacochères Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati sint laudantium corrupti libero blanditiis voluptatibus, exercitationem sapiente, quaerat rem at placeat. Aut tenetur exercitationem eos libero ipsa doloribus et nobis?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque repudiandae voluptatem dolorem accusantium recusandae, nesciunt rem. Reiciendis nisi autem aliquam qui maxime ea quaerat, recusandae sunt facilis error quod Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis atque accusamus nihil velit alias dolorem nam veniam corporis tempore quibusdam error aliquid optio, fugit iusto, in delectus? Iusto, ducimus asperiores!</p></div>
 
             <!--caroussel de vidéos de meme catégorie-->
-            <div id="carousselVisionnage"></div>
+            <div id="carousselVisionnage">
+                <h3>Vous avez aimez? Vous aimerez aussi ceci </h3>
+            </div>
 
             <!--commentaires de la vidéo à visionner-->
-            <div id=" commentaireVisionnage"></div>
+            <div id=" commentaireVisionnage">
+                <h2>commentaires</h2>
+                <form method="post" action="ton_script_recup_data_form.php">
+                    <label for="pseudo">Pseudo:</label>
+                        <input type="text" name="pseudo" placeholder="Ton pseudo" maxlength="20" id="pseudo"/>
+                        <br>
+                        <label for="commentaire">Lache un com :</label>
+                        <br>
+                        <textarea name="commentaire" id="commentaire" placeholder="T'en à pensé quoi?" cols="70" rows="10"></textarea>
+                </form>
+            </div>
     </Section>
     <div id="vFooter"></div>
     </div>
