@@ -8,18 +8,77 @@
     <title>INSCRIPTION</title>
 </head>
 <body>
-    <legend>INSCRIPTION/CONNEXION</legend>
- 
-    <form method="post" action="monProgramme.php">
-    <label for="liste">Civilité</label>
-    <select name="liste" id="liste">
-        <option value="option1">Mme</option>
-        <option value="option2">Mr</option>
-    </form>
+<div id="container">
+    <span class="ligne1">
+        <legend>INSCRIPTION/ CONNEXION</legend>
+    </span>
+    
+    <form id="formInscription" action="">
 
-    <form method="post" action="monProgramme.php">
-        <label for="nom">Votre nom</label>
-        <input type="text" name="nom" placeholder="Entrez votre nom" maxlength="20" id="nom">
-    </form>
+        <div class="inscriptionCivilite">
+            <label for="liste">Civilité</label>
+            <select name="liste" id="liste">
+                <option value="option1">Mme</option>
+                <option value="option2">Mr</option>
+            </select>
+        </div>
+
+        <label for="nom" class="inscriptionNom">Nom</label>
+        <input class="inscriptionNomBox" type="text" name="nom" placeholder="Entrez votre nom" maxlength="20" id="nom">
+    
+        <label for="prenom"class="inscriptionPrenom">Votre prénom</label>
+        <input class="inscriptionPrenombox" type="text" name="prenom" placeholder="Entrez votre prénom" maxlength="20" id="prenom">
+
+        <label for="naissance" class="inscriptionNaissance">Date de naissance</label>
+        <input class="inscriptionNaissancebox" type="text" name="naissance" placeholder="Votre date de naissance" maxlenght="20" id="naissance">
+   
+        <label for="email" class="inscriptionEmail">Votre email</label>
+        <input class="inscriptionEmailbox" type="email" name="email" placeholder="Entrez votre mail" maxlength="20" id="email">
+        
+        <label for="confiemail" class="inscriptionConfie">Confirmer votre email</label>
+        <input class="inscriptionConfiebox" type="email" name="confiemail" placeholder="Confirmer votre email" maxlength="20" id="confiemail">
+   
+        <label for="motdepasse" class="inscriptionMotdepasse">Mot de passe</label>
+        <input class="inscriptionMotdepassebox" type="password" placeholder="Mot de passe" maxlenght="20" id="motdepasse" name="motdepasse">
+ 
+        <label for="confimotdepasse" class="inscriptionconfirmer">Confirmer votre mot de passe</label>
+        <input class="inscriptionconfirmerbox" type="password" placeholder="Confirmer votre mot de passe" maxlenght="20" id="confimotdepasse" name="confimotdepasse">
+    
+
+        <legend class="preference">VOS PREFERENCE(S)</legend>
+
+        <div class="inscriptionPref1 inscriptionPref">
+            <label for="horreur">Horreur</label>
+            <input type="checkbox" id="horreur" name="horreur"> 
+        </div>
+
+        <div class="inscriptionPref2 inscriptionPref">
+            <label for="animaux">Animaux</label>
+            <input type="checkbox" id="animaux" name="animaux">
+        </div>
+
+        <div class="inscriptionPref3 inscriptionPref">
+            <label for="dessinAnime">Dessin animé</label>
+            <input type="checkbox" id="dessinAnime" name="dessinanime">
+        </div>
+
+        <div class="inscriptionPref4 inscriptionPref">
+            <label for="sport">Sport</label>
+            <input type="checkbox" id="sport" name="sport">
+        </div>
+    
+    
+
+        <div class="inscriptionValidation">
+            <input type="submit" value="Valider">
+            <input type="submit" value="Login">
+        </div>
+
+     </form>
+
+     </div>
+
+
+
 </body>
 </html>
