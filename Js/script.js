@@ -72,6 +72,7 @@ var flechenav = document.getElementById("ouvrezMoi")
 var opentest = document.getElementById("openbtn")
 var closetest = document.getElementById("closebtn")
 var menuBurgerBouton = document.getElementById("openBtnBurger")
+var burgerspan = document.getElementById("burgerspan")
 
 opentest.onclick = openandclosenav;
 menuBurgerBouton.onclick = openandclosenav
@@ -81,12 +82,12 @@ function openandclosenav(){
     if(sidenav.classList.contains("ok")){
         sidenav.classList.remove("ok")
         flechenav.classList.remove("ok")
-        menuBurgerBouton.classList.remove("ok")
+        burgerspan.classList.remove("ok")
     }
     else{
         sidenav.classList.add("ok")
         flechenav.classList.add("ok")
-        menuBurgerBouton.classList.add("ok")
+        burgerspan.classList.add("ok")
     }
 }
 

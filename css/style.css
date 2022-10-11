@@ -450,7 +450,7 @@ body{
 
 @media all and (max-width:760px){
   body{
-    margin: 0;
+    margin-top: 0px;
     background-color: var(--fondMax);
   }
   .burger-icon{
@@ -464,8 +464,43 @@ body{
     width: 35px;
     height: 5px;
     background-color: black;
-    margin: 6px 6px;
+    margin: 6px 10px;
     cursor: pointer;
+    transition: 0.5s linear;
+  }
+  .burgerBar1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -10px);
+  }
+  .burgerBar2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0px);
+  }
+  .burgerBar3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 10px);
+  }
+
+  .burger-icon.ok .burgerBar1{
+    transform: rotate(60deg);
+    border-radius: 40%;
+
+
+  }
+  .burger-icon.ok .burgerBar2{
+    left: -40px;
+    border-radius: 100%;
+  }
+  .burger-icon.ok .burgerBar3{
+    transform: rotate(-60deg);
+    border-radius: 40%;
+
   }
 
   .sidenav{
@@ -476,7 +511,7 @@ body{
     background-color: var(--backgroundNavBarnumero02);
     background-image: none;
     top: -100%;
-    transition: 1s; 
+    transition: 0.5s linear; 
   }
   
   .sidenav.ok{
