@@ -1,0 +1,177 @@
+#container{
+    border:5px solid black;
+    padding:10px;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px aut1fro;
+}
+label{
+    justify-self:left;
+    align-self: left;
+}
+
+input{
+    height: 2vh;
+    justify-self: left;
+    align-self: left;
+}
+
+.ligne1{
+    background-color: aquamarine;
+    grid-column: 1;
+    grid-row: 1;
+    text-align: center;
+    font-size: xx-large;
+}
+
+#container form {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+
+#formInscription {
+    background-color: antiquewhite;
+    border:5px solid black;
+    padding:10px;
+    height:600px;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: repeat(10, 1fr);
+}
+
+.inscriptionCivilite {
+    grid-column:1 ;
+    grid-row: 1;
+    justify-self: left;
+    align-self: left;
+}
+
+.inscriptionNom {
+    grid-column:3 ;
+    grid-row: 1;
+}
+
+.inscriptionNomBox {
+    grid-column: 4;
+    grid-row: 1;
+}
+
+.inscriptionPrenom{
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.inscriptionPrenombox{
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.inscriptionNaissance{
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.inscriptionNaissancebox{
+    grid-column: 4;
+    grid-row: 2;
+}
+
+.inscriptionEmail{
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.inscriptionEmailbox{
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.inscriptionConfie{
+    grid-column: 3;
+    grid-row: 3;
+}
+
+.inscriptionConfiebox{
+    grid-column: 4;
+    grid-row: 4;
+}
+
+.inscriptionMotdepasse{
+    grid-column: 1;
+    grid-row: 4;
+}
+
+.inscriptionMotdepassebox{
+    grid-column: 2;
+    grid-row: 4;
+}
+
+.inscriptionconfirmer{
+    grid-column: 3;
+    grid-row: 4;
+}
+
+.inscriptionconfirmerbox{
+    grid-column: 4;
+    grid-row: 4;
+}
+
+.preference{
+    grid-column: 2;
+    grid-row: 5;
+    grid-column: 1/span 4;
+    text-align: center;
+    font-size: large;
+}
+
+.inscriptionPref{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    
+}
+
+.inscriptionPref input{
+    appearance: none;
+    margin-right: 20px;
+    transform: translateY(-5px);
+    border: 2px solid black;
+    height: 20px;
+    width: 20px;
+    border-radius: 0%;
+    
+}
+
+.inscriptionPref input:checked{
+    border-radius: 50%;
+}
+
+.inscriptionPref1{
+    grid-column: 1;
+    grid-row: 6;
+}
+
+.inscriptionPref2{
+    grid-column: 1;
+    grid-row: 7;
+}
+
+.inscriptionPref3{
+    grid-column: 1;
+    grid-row: 8;
+}
+
+.inscriptionPref4{
+    grid-column: 1;
+    grid-row: 9;
+}
+
+.inscriptionValidation{
+    grid-column: 1;
+    grid-row: 10;
+}
+

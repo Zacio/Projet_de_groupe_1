@@ -72,18 +72,22 @@ var sidenav = document.getElementById("mySidenav")
 var flechenav = document.getElementById("ouvrezMoi")
 var opentest = document.getElementById("openbtn")
 var closetest = document.getElementById("closebtn")
+var menuBurgerBouton = document.getElementById("openBtnBurger")
 
 opentest.onclick = openandclosenav;
+menuBurgerBouton.onclick = openandclosenav
 
 
 function openandclosenav(){
     if(sidenav.classList.contains("ok")){
         sidenav.classList.remove("ok")
         flechenav.classList.remove("ok")
+        menuBurgerBouton.classList.remove("ok")
     }
     else{
         sidenav.classList.add("ok")
         flechenav.classList.add("ok")
+        menuBurgerBouton.classList.add("ok")
     }
 }
 
