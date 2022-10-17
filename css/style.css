@@ -12,7 +12,7 @@
   --backgroundNavBarnumero01: #fff6d9;
   --backgroundNavBarnumero02: rgb(200, 200, 200);
   --backgroundNavBarnumero03:#fff6d9;
-  --textNavBar: black;
+  --textNavBar:#0f056b;
   --navLinkBackGround01: #fff6d9;
   --navLinkABackground:#fffbee;
   /*-----------------nav & footer------------------*/
@@ -140,18 +140,21 @@ a:hover
   height: 100px;
 }
 body{
-  margin: 0px;
-  background-color: var(--fondMax);
+  background-color: var(--fondMax); 
 }
 .sidenav{
-  position: fixed;
+  position: absolute;
   z-index: 6;
   height: 150px;
-  width: 100%;
+  width:98%;
+  margin:auto;
   background-image: linear-gradient(var(--backgroundNavBarnumero01), var(--backgroundNavBarnumero02));
   top: -100px;
   transition: 1s;
-  border: 5px solid var(--textNavBar);
+  border-top: 5px solid var(--textNavBar);
+  border-bottom: 5px solid var(--textNavBar);
+  border-left: 5px solid var(--textNavBar);
+  border-right: 5px solid var(--textNavBar);
 }
 .sidenav.ok{
   top: 0px;
