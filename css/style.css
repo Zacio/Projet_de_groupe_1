@@ -20,7 +20,7 @@
   --texteMax: black;
   --texteMin:lightslategrey;
 
-  --fondMax: #fefefe;
+  --fondMax: #fffbee;
   --fondMed: rgb(235, 236, 219);
   --fondMin: rgb(223, 183, 130);
   --texteBleu: rgb(24, 46, 216);
@@ -76,7 +76,7 @@
 
   /*-----------------nav & footer------------------*/
   --logoImageBackground:url(../img/logo1.1.png);
-  --backgroundNavBarnumero01: black;
+  --backgroundNavBarnumero01: #0e0c22 ;
   --backgroundNavBarnumero02: rgb(100, 100, 100);
   --textNavBar: #fff6d9;
   --navLinkBackGround01: rgb(95, 95, 95);
@@ -85,7 +85,7 @@
 
   --texteMax:#fefefe;
   --texteMin:rgb(223, 183, 130);
-  --fondMax: black;
+  --fondMax: #0e0c22;
 
   --fondMed: rgb(50, 54, 58);
   --fondMin:rgb(23, 28, 32);
