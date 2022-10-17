@@ -130,8 +130,8 @@ a:hover
   width: 100%;
   height: 100px;
   background-color: var(--backgroundNavBarnumero01);
-  top: 0px;
-  z-index: 10;
+  top: 50px;
+  z-index: 5;
 }
 .logo{
   background-image: var(--logoImageBackground);
@@ -143,22 +143,19 @@ body{
   margin: 0px;
   background-color: var(--fondMax);
 }
-.navhiden{
-  z-index: 5;
-  width: 100%;
-  height: 150px;
-  background-color: aquamarine;
-}
 .sidenav{
   position: fixed;
-  z-index: 5;
-  height: 200px;
+  z-index: 6;
+  height: 150px;
   width: 100%;
   background-image: linear-gradient(var(--backgroundNavBarnumero01), var(--backgroundNavBarnumero02));
-  top: 0px;
-  transition: 1s; 
+  top: -100px;
+  transition: 1s;
+  border: 5px solid var(--textNavBar);
 }
-
+.sidenav.ok{
+  top: 0px;
+}
 .openbtn{
   width: 100%;
   height: 50px;
@@ -295,7 +292,7 @@ body{
     transform:translate(-50%, -100%) rotate(45deg);
     border-width:0px 3px 3px 0px;
     transition: 1s;
-        
+    
 }
 
 .boiteFleche.ok .flecheNavbarA
@@ -344,6 +341,9 @@ body{
   transform:translate(-50%, -100%) rotate(225deg);
 }
 
+.boiteFleche{
+  border: 5px solid var(--textNavBar);
+}
 /* KEYFRAMES FLECHES */
 
 @keyframes navbarA {
@@ -469,7 +469,12 @@ body{
     margin-top: 0px;
     background-color: var(--fondMax);
   }
-
+  .pcTuneBaniere{
+    top: 0px;
+  }
+  .boiteFleche{
+    border: none;
+  }
   /*----------menu burger------------*/
   .burger-icon{
     position: fixed;
@@ -528,7 +533,7 @@ body{
     position: fixed;
     z-index: 4;
     height: 90%;
-    width: 100%;
+    width: 1fr;
     background-color: var(--backgroundNavBarnumero02);
     background-image: none;
     top: -100%;
