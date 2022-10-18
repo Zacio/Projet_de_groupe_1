@@ -152,7 +152,7 @@ body{
 
 header {
   width:100%;
-  background-color: #0f056b;
+  background-color: var(--textNavBar);
   display:flex;
   justify-content: center;
   height: 155px;;
@@ -487,6 +487,10 @@ header {
     margin-top: 0px;
     background-color: var(--fondMax);
   }
+  
+  body header{
+    height: 105px;
+  }
   .pcTuneBaniere{
     top: 0px;
   }
@@ -546,16 +550,19 @@ header {
 
   }
   /*----------menu burger------------*/
-
+  body.ok{
+    background-image: radial-gradient();
+  }
   .sidenav{
+    left: 1%;
     position: fixed;
     z-index: 4;
     height: 90%;
-    width: 1fr;
+    width: 98%;
     background-color: var(--backgroundNavBarnumero02);
     background-image: none;
     top: -100%;
-    transition: 0.5s linear; 
+    transition: 0.5s linear;
   }
   
   .sidenav.ok{
