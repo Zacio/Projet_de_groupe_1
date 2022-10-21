@@ -6,6 +6,7 @@
   --texteMax: rgb(20, 20, 20);
   --texteMed:rgb(59, 63, 66);
   --texteMin:rgb(84, 91, 99);
+  
 
   /*-----------------nav & footer------------------*/
   --logoImageBackground:url(../img/logo2.1.png);
@@ -25,6 +26,11 @@
   --fondMin: rgb(223, 183, 130);
   --texteBleu: rgb(24, 46, 216);
   --bordureParagraphe: lightblue;
+
+    /*-----------------Connexion & formulaire de contact------------------*/
+
+  --connexionMain:#dcd9cb;
+  --connexionButton:#fff6d9;
 }
 
 /* SCHEME DARK */
@@ -58,8 +64,15 @@
     --fondMin:rgb(23, 28, 32);
     --texteBleu: rgb(69, 89, 181);
     --bordureParagraphe: darkblue;
+
+      /*-----------------Connexion & formulaire de contact------------------*/
+
+    --connexionMain:#373266;
+    --connexionButton:#0f056b;
   }
   
+
+
 }
 
 /* MODE SOMBRE */
@@ -91,6 +104,12 @@
   --fondMin:rgb(23, 28, 32);
   --texteBleu: rgb(69, 89, 181);
   --bordureParagraphe: darkblue;
+
+  /*-----------------Connexion & formulaire de contact------------------*/
+
+  --connexionMain:#373266;
+  --connexionButton:#0f056b;
+
 }
 
 /* COMMANDES GLOBALES */
@@ -133,14 +152,20 @@ a:hover
   background-color: var(--backgroundNavBarnumero01);
   top: 50px;
   z-index: 5;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(2, minmax(1fr, 300px));
 }
+
 .logo{
   background-image: var(--logoImageBackground);
   background-position: center left 50px;
   background-repeat: no-repeat;
+  overflow: hidden;
   width:100%;
   height: 100px;
 }
+
 body{
   background-color: var(--fondMax);
   display: flex;
@@ -1032,4 +1057,106 @@ ul {
   .underline {
     margin-bottom: 10px;
   }
+}
+
+/* FORMULAIRE DE CONTACT */
+
+/* TITRE ET LOGO */
+
+.contactLogo {
+  grid-row:1;
+  grid-column:1;
+}
+
+.contactTitre {
+  grid-row:1;
+  grid-column:2;
+  margin:0;
+  padding:0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contactTitre p {
+  font-size: clamp(20px, 2.5vw, 30px);
+  font-weight: bold;
+  text-align:justify;
+  color:var(--textNavBar);
+}
+
+/* Connexion */
+
+.connnexionFormulaire {
+  margin-top:20vh;
+  margin-bottom: 20vh;
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content: space-around;
+}
+
+div.connnexionEmpty {
+  height:100px;
+  width: 100px;
+}
+
+div.connnexionMain {
+  background-color:var(--connexionMain);
+  border:solid var(--textNavBar) 5px;
+  color:var(--textNavBar);
+  height: 250px;
+  width: 400px;
+  flex:0 0 auto;
+}
+
+h1.connnexionMain {
+  text-align: center;
+  font-size: 35px;
+}
+
+div.connnexionPseudoPass {
+  margin-left: 30px;
+  margin-right: 100px;
+  margin-bottom: 10px;
+  display:flex;
+  justify-content:space-between;
+}
+
+.connnexionCB {
+  margin-left: 25px;    
+  display:flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.connnexionCB label, .connnexionCB div {
+  cursor: pointer;
+}
+
+.connnexionButton {
+  margin-top:10px;
+  padding:5px;
+  display:flex;
+  justify-content: center;
+  font-weight: bold;
+}
+
+input#connnexionBouton {
+  margin-right:10px;
+  margin-left:10px;
+  height:35px;
+  width:100px;
+  font-weight: bold;
+  color:var(--textNavBar);
+  background-color: var(--connexionButton);
+}
+
+input#connnexionBouton:hover {
+  background-color: rgb(157, 165, 213);
+  cursor: pointer;
+}
+
+input#connnexionCheckbox {
+  margin-right:10px;
 }

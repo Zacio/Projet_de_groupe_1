@@ -34,6 +34,30 @@ function themeSwap() {
                            
               }
 }         
+function themeSwapContact() {
+
+  if (document.documentElement.classList.contains("clair")) { 
+
+    document.documentElement.classList.add("sombre")
+    document.documentElement.classList.remove("clair")    
+
+      } else if (document.documentElement.classList.contains("sombre")) {
+
+      document.documentElement.classList.add("clair")
+      document.documentElement.classList.remove("sombre")
+
+          } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+
+            document.documentElement.classList.add("sombre")
+            document.documentElement.classList.remove("clair")
+
+              } else { 
+
+              document.documentElement.classList.add("clair")
+              document.documentElement.classList.remove("sombre")
+                           
+              }
+}         
 
 function themeSwapDesk() {
 

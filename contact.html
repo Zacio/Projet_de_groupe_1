@@ -1,19 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="fr">
 
 <head>
+    <title>Exo Nico</title>
+
+    <meta name="author" content="Nico M">
+    <meta name="description" content="formulaire de contact">
+
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+
 </head>
 
 <body onload="themeSwap()">
+
     <header>
         <div class="pcTuneBaniere">
-            <div class="logo">
-
+            <div class="logo" class="conctactLogo">
+            </div>
+            <div class="contactTitre">
+                <p>Formulaire de contact</p>
             </div>
         </div>
         <nav>
@@ -47,7 +57,7 @@
                             <a href="sport.html">sport</a>
                         </ul>
                     </li>
-                    <li><a href="contact.html" class="sideNavLienPrincipale">Contact</a></li>
+                    <li><a href="desk.html" class="sideNavLienPrincipale">Contact</a></li>
                     <li><a href="Inscription.html" class="sideNavLienPrincipale">Inscription</a></li>
                 </ul>
 
@@ -65,14 +75,33 @@
             </div>
         </nav>
     </header>
-    <div class="test">
 
-    </div>
-    <footer>
-        <a href="#">
-            Bonjour
-        </a>
-    </footer>
+    <section class="connnexionFormulaire">
+        <div class="connnexionEmpty"></div>
+        <div class="connnexionMain">
+            <h1 class="connnexionMain">Identifiants</h1>
+            <form action="post">
+                <div class="connnexionPseudoPass">
+                    <label for="pseudo">Pseudo:</label>
+                    <input type="text" name="pseudo" id="pseudo" placeholder="Mon pseudo">
+                </div>
+                <div class="connnexionPseudoPass">
+                    <label for="mdp">Mot de passe:</label>
+                    <input type="password" name="mdp" id="mdp" placeholder="Mon mot de passe">
+                </div>
+                <div class="connnexionCB">
+                    <label for="connnexionCheckbox">Se souvenir de moi</label>
+                    <input type="checkbox" name="checkbox" id="connnexionCheckbox">
+                </div>
+                <div class="connnexionButton">
+                    <a href="contactFormulaire.html"><input type="button" value="Connexion" id="connnexionBouton"></a>
+                    <a href="index.html"><input type="button" value="Retour" id="connnexionBouton"></a>
+                </div>
+            </form>
+        </div>
+        <div class="connnexionEmpty"></div>
+    </section>
+
     <script src="Js/script.js"></script>
 </body>
 
