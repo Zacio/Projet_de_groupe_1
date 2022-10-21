@@ -22,7 +22,7 @@
   --texteMin:lightslategrey;
 
   --fondMax: #fffbee;
-  --fondMed: rgb(235, 236, 219);
+  --fondMed: rgb(252, 246, 217);
   --fondMin: rgb(223, 183, 130);
   --texteBleu: rgb(24, 46, 216);
   --bordureParagraphe: lightblue;
@@ -31,6 +31,7 @@
 
   --connexionMain:#dcd9cb;
   --connexionButton:#fff6d9;
+  --serpent:#0f056b;
 }
 
 /* SCHEME DARK */
@@ -60,7 +61,7 @@
     --texteMed: antiquewhite;
     --texteMin:bisque;
     --fondMax: rgb(20, 20, 20);
-    --fondMed:rgb(50, 54, 58);
+    --fondMed:rgb(20, 53, 85);
     --fondMin:rgb(23, 28, 32);
     --texteBleu: rgb(69, 89, 181);
     --bordureParagraphe: darkblue;
@@ -69,6 +70,8 @@
 
     --connexionMain:#373266;
     --connexionButton:#0f056b;
+    --serpent:#32f6e9;
+
   }
   
 
@@ -100,7 +103,7 @@
   --texteMin:rgb(223, 183, 130);
   --fondMax: #0e0c22;
 
-  --fondMed: rgb(50, 54, 58);
+  --fondMed:rgb(27, 51, 108);
   --fondMin:rgb(23, 28, 32);
   --texteBleu: rgb(69, 89, 181);
   --bordureParagraphe: darkblue;
@@ -109,6 +112,8 @@
 
   --connexionMain:#373266;
   --connexionButton:#0f056b;
+  --serpent:#32f6e9;
+
 
 }
 
@@ -1092,7 +1097,7 @@ ul {
   color:var(--textNavBar);
 }
 
-/* Connexion */
+/* CONNEXION */
 
 .connnexionFormulaire {
   margin-top:20vh;
@@ -1166,4 +1171,74 @@ input#connnexionBouton:hover {
 
 input#connnexionCheckbox {
   margin-right:10px;
+}
+
+/* FORMULAIRE */
+
+#bodyFormulaire {
+  position:absolute;
+  top:175px;
+  left:0px;
+  height: 75%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.formulaireBoite {
+  position: relative;
+  height: 80%;
+  width: 60%;
+  flex-shrink: 1;
+  border: solid black 2px;
+  background:var(--fondMax);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formulaireBoite::after {
+  content:'';
+  position:absolute;
+  top:50%;
+  left:50%;
+  height: 40%;
+  width: 60%;
+  background:var(--serpent);
+  transform-origin: top left;
+  animation: rotationFormulaire 6s linear infinite;
+}
+
+.formulaireBoite::before {
+  content:'';
+  position:absolute;
+  top:50%;
+  left:50%;
+  height: 40%;
+  width: 60%;
+  background:var(--serpent);
+  transform-origin: top left;
+  animation: rotationFormulaire 6s linear infinite -3s;
+}
+
+@keyframes rotationFormulaire {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.formulaireForm {
+  /* display: none; */
+  z-index:100;
+  border: solid black 2px;
+  background:var(--fondMed);
+  height: 96%;
+  width: 98%;
 }
