@@ -919,106 +919,115 @@ transform: rotateX(45deg) rotateY(15deg) rotateZ(-32deg) translateX(8vw) transla
 
 /*tornike*/
 
-.container {
-  position: relative;
-  display:flex;
-  min-height: 100vh;
-  background-color: #334;
-  
-  /* background-color: blue;     */
+.cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  padding: 20px;
+  grid-gap: 20px;
+  margin: 10px 150px 10px 150px;
 }
-
-.video-main {
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 auto;
-  width:max-content;
-  justify-content: space-around;
-  margin: 50px;
-  padding-left: 20px;
-}
-
-.video-container {
-  display:grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-template-rows: auto;
-  grid-gap:15px;
-  margin-top: 30px;
-  margin-left: 20px;
-  align-content: center;
-  height: fit-content;
-  padding-bottom: 50px;
-  text-align: center;
-  background-color: #334;
-}
-
-.videos {
+.card{
+  background-color: #1c1b29;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.18);
   cursor: pointer;
-  /* margin-bottom: 5px; */
-  height:clamp(150px, 20vw, 170px);
-  width:300px;
-  margin:0 0 10px 0;
-  padding-top: 30px;
 }
-
-iframe {
+.imageContainer{
+  position: relative;
+  clip-path: polygon(0 0,100% 0, 100% 90%, 0 100%);
+}
+img{
+  width: 100%;
+  display: block;
+  border-radius: 20px 20px 0 5px;
+}
+.imageContainer:after{
+  content: "";
   height: 100%;
   width: 100%;
-  object-fit: cover;
-  transition: .2s linear;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 20px 20px 0 0;
+  opacity: 0.5;
 }
-.videos:hover iframe {
-  transform: scale(1.1);
-  box-shadow: 0 0px 30px rgba(224, 224, 224, 0.8);
-  border-radius: 10px;
+/*
+#arsenalCard>.imageContainer:after{
+  background-image: linear-gradient(
+      135deg,
+      #ff0000,
+      #ffffff
+  );
 }
-.test{
-  background-color: aqua;
-  height:600px;
-  width: 200px;
+#chelseaCard>.imageContainer:after{
+  background-image: linear-gradient(
+      135deg,
+      #0000ff,
+      #ffffff
+  );
 }
-/* header { */
-  /* height: 50px; */
-  /* width: 100%; */
-  /* background-color: rgb(195, 195, 201); */
-  /* text-align: center; */
-  /* position: fixed; */
-/* } */
+#manCityCard>.imageContainer:after{
+  background-image: linear-gradient(
+      135deg,
+      #0095ff,
+      #ffffff
+  );
+}
+#manUtdCard>.imageContainer:after{
+  background-image: linear-gradient(
+      135deg,
+      #000000,
+      #ffffff
+  );
+}
+*/
+.details{
+  padding: 0px 10px;
+}
+.details>h3{
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 18px;
+  margin: 10px 0 10px 0;
 
-                                              /* Navigation */
-.navbar {
-    margin-top: 139px;
-    flex:none;
-    width:5px;
-    background-color: rgb(183, 183, 190);
-    overflow: hidden;
-    padding-top: 60px;
-    height: 100vh;
-    top: -40;
 }
-.navbar:hover, .navbar:active {
-    width:clamp(120px, 15vw, 200px);
-    height: 100vh;
-    padding-top: 60px;
-    height: 100vh;
-    top: -40;
-    margin-top: 139px;
-
+.details>p{
+  color: #a0a0a0;
+  font-size: 15px;
+  line-height: 25px;
+  padding-bottom: 10px;
 }
-ul {
-  list-style-type: none;
-
+.card:hover {
+  box-shadow: 0 0px 15px rgba(255, 255, 255, 0.1);
+  transition: 0.3s linear;
 }
 .underline {
   border: 0;
   height: 1px;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(184, 184, 184), rgba(255, 255, 255, 0));
+  background-image: linear-gradient(to right, rgba(1, 0, 0, 0), rgb(120, 18, 18), rgba(16, 1, 1, 0));
 }
-#headerArs, #headerCity, #headerUtd, #headerChelsea, h1  {
-  text-align: center;
+/*
+.navbar {
+  margin-top: 139px;
+  flex:none;
+  width:5px;
+  background-color: rgb(183, 183, 190);
+  overflow: hidden;
+  padding-top: 60px;
+  height: 100vh;
+  top: -40;
 }
-
-@media only screen and (max-width: 800px) {
+*/
+@media only screen and (max-width: 950px) {
+  .cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    padding: 20px;
+    grid-gap: 20px;
+    margin: 30px;
+  }
+}
+  /*
   html, body {
     height: 100%;
     margin: 0;
@@ -1071,6 +1080,8 @@ ul {
     margin-bottom: 10px;
   }
 }
+*/
+
 
 /* FORMULAIRE DE CONTACT */
 
