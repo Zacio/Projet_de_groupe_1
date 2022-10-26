@@ -1189,8 +1189,8 @@ input#connnexionCheckbox {
 
 #bodyFormulaire {
   position:absolute;
-  top:175px;
-  left:0px;
+  top: 175px;
+  left: 0px;
   height: 75%;
   width: 100%;
   display: flex;
@@ -1204,8 +1204,8 @@ input#connnexionCheckbox {
   height: 80%;
   width: 60%;
   flex-shrink: 1;
-  border: solid black 2px;
-  background:var(--fondMax);
+  border: solid black 3px;
+  background:var(--fondMed);
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -1217,7 +1217,7 @@ input#connnexionCheckbox {
   position:absolute;
   top:50%;
   left:50%;
-  height: 40%;
+  height: 35%;
   width: 60%;
   background:var(--serpent);
   transform-origin: top left;
@@ -1229,7 +1229,7 @@ input#connnexionCheckbox {
   position:absolute;
   top:50%;
   left:50%;
-  height: 40%;
+  height: 35%;
   width: 60%;
   background:var(--serpent);
   transform-origin: top left;
@@ -1247,9 +1247,7 @@ input#connnexionCheckbox {
 }
 
 .formulaireForm {
-  /* display: none; */
   z-index:100;
-  border: solid black 2px;
   background:var(--fondMed);
   height: 96%;
   width: 98%;
