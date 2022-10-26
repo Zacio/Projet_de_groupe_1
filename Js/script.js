@@ -34,6 +34,30 @@ function themeSwap() {
                            
               }
 }         
+function themeSwapContact() {
+
+  if (document.documentElement.classList.contains("clair")) { 
+
+    document.documentElement.classList.add("sombre")
+    document.documentElement.classList.remove("clair")    
+
+      } else if (document.documentElement.classList.contains("sombre")) {
+
+      document.documentElement.classList.add("clair")
+      document.documentElement.classList.remove("sombre")
+
+          } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+
+            document.documentElement.classList.add("sombre")
+            document.documentElement.classList.remove("clair")
+
+              } else { 
+
+              document.documentElement.classList.add("clair")
+              document.documentElement.classList.remove("sombre")
+                           
+              }
+}         
 
 function themeSwapDesk() {
 
@@ -74,6 +98,7 @@ var opentest = document.getElementById("openbtn")
 var closetest = document.getElementById("closebtn")
 var menuBurgerBouton = document.getElementById("openBtnBurger")
 var burgerspan = document.getElementById("burgerspan")
+var bodyColor = document.getElementById("body")
 
 opentest.onclick = openandclosenav;
 menuBurgerBouton.onclick = openandclosenav
@@ -84,11 +109,13 @@ function openandclosenav(){
         sidenav.classList.remove("ok")
         flechenav.classList.remove("ok")
         burgerspan.classList.remove("ok")
+        bodyColor.classList.remove("ok")
     }
     else{
         sidenav.classList.add("ok")
         flechenav.classList.add("ok")
         burgerspan.classList.add("ok")
+        bodyColor.classList.add("ok")
     }
 }
 
