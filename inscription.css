@@ -259,7 +259,6 @@ h2{
 }
 
 .inscriptionPref input{
-    appearance: none;
     margin-right: 20px;
     transform: translateY(-5px);
     border: 2px solid var(--textNavBar);
@@ -390,7 +389,6 @@ h2{
     }
     
     .inscriptionPref input{
-        appearance: none;
         margin-right: 20px;
         transform: translateY(-5px);
         border: 2px solid var(--textNavBar) ;
@@ -789,7 +787,7 @@ h2{
       position: fixed;
       z-index: 11;
       top: 40px;
-      right: 10%;
+      right: 20%;
     }
   
     .burger-icon span {
@@ -996,6 +994,7 @@ h2{
       justify-content: space-between;
       align-items: center;
       width: 80vw;
+      padding-top: 10%;
     }
     .sideLink li{
       flex: 1 1 auto;
@@ -1005,7 +1004,7 @@ h2{
       text-align: center;
       padding: 8px 8px 8px 32px;
       text-decoration: none;
-      font-size: 55px;
+      font-size: 30px;
     
       color: var(--fondMed);
     
@@ -1035,4 +1034,3 @@ h2{
     }
     
   }
-  
