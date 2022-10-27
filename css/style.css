@@ -1506,6 +1506,21 @@ img{
     color: var(--textNavBar);
     font-size: 15px;
   }
+  .logo {
+    position: absolute;
+  }
+  .pcTuneBaniere {
+    position: absolute;
+  }
+  .burger-icon{
+    padding-right: 15px;
+  }
+}
+@media only screen and (max-width: 280px) {
+.burger-icon {
+  align-self: flex-end;
+  padding-right: 50px;
+}
 }
   /*
   html, body {
