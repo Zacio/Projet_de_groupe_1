@@ -259,7 +259,6 @@ h2{
 }
 
 .inscriptionPref input{
-    appearance: none;
     margin-right: 20px;
     transform: translateY(-5px);
     border: 2px solid var(--textNavBar);
@@ -390,7 +389,6 @@ h2{
     }
     
     .inscriptionPref input{
-        appearance: none;
         margin-right: 20px;
         transform: translateY(-5px);
         border: 2px solid var(--textNavBar) ;
@@ -405,18 +403,18 @@ h2{
 }
 
 .pcTuneBaniere{
-    position:absolute;
-    margin: 0px;
-    width: 99.5%;
-    margin:auto;
-    height: 100px;
-    background-color: var(--backgroundNavBarnumero01);
-    top: 50px;
-    z-index: 5;
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: repeat(2, minmax(1fr, 300px));
-  }
+  position:fixed;
+  margin: 0px;
+  width: 99.5%;
+  margin:auto;
+  height: 100px;
+  background-color: var(--backgroundNavBarnumero01);
+  top: 50px;
+  z-index: 5;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(2, minmax(1fr, 300px));
+}
   
   .logo{
     background-image: var(--logoImageBackground);
@@ -445,7 +443,7 @@ h2{
   }
   
   .sidenav{
-    position: absolute;
+    position: fixed;
     z-index: 6;
     height: 150px;
     width:99.5%;
@@ -779,6 +777,7 @@ h2{
     }
     .pcTuneBaniere{
       top: 0px;
+      border: 3px solid var(--textNavBar);
     }
     .boiteFleche{
       border: none;
@@ -787,6 +786,8 @@ h2{
     .burger-icon{
       position: fixed;
       z-index: 11;
+      top: 40px;
+      right: 20%;
     }
   
     .burger-icon span {
@@ -840,15 +841,16 @@ h2{
       background-image: radial-gradient();
     }
     .sidenav{
-      left: 1%;
+      left: 0.5%;
       position: fixed;
       z-index: 4;
       height: 90%;
       width: 98%;
-      background-color: var(--backgroundNavBarnumero02);
+      background-color: var(--backgroundNavBarnumero01);
       background-image: none;
       top: -100%;
       transition: 0.5s linear;
+      border: 3px solid var(--textNavBar);
     }
     
     .sidenav.ok{
@@ -992,6 +994,7 @@ h2{
       justify-content: space-between;
       align-items: center;
       width: 80vw;
+      padding-top: 10%;
     }
     .sideLink li{
       flex: 1 1 auto;
@@ -1001,7 +1004,7 @@ h2{
       text-align: center;
       padding: 8px 8px 8px 32px;
       text-decoration: none;
-      font-size: 55px;
+      font-size: 30px;
     
       color: var(--fondMed);
     
@@ -1031,4 +1034,3 @@ h2{
     }
     
   }
-  

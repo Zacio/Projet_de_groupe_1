@@ -532,6 +532,8 @@ header {
   .burger-icon{
     position: fixed;
     z-index: 11;
+    top: 40px;
+    right: 10%;
   }
 
   .burger-icon span {
@@ -607,7 +609,6 @@ header {
     position: absolute;
     z-index: -1;
     bottom: 0;
-    text-align: center;
   }
   
   /* #openbtn{
@@ -738,6 +739,7 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 80vw;
+    padding-top: 10%;
   }
   .sideLink li{
     flex: 1 1 auto;
@@ -747,7 +749,7 @@ header {
     text-align: center;
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 55px;
+    font-size: 30px;
   
     color: var(--fondMed);
   
@@ -767,7 +769,7 @@ header {
     z-index: 1;
   }
   #categorieSideCat a{
-    font-size: 35px;
+    font-size: 20px;
   }
   #categorieSideCat a:hover{
     background: none;
@@ -882,21 +884,25 @@ footer a:visited{
   top:50%;
   left:50%;
   transform-style: preserve-3d;
-  height:125px;
-  width: 200px;
+  height:150px;
+  width: 225px;
+}
+
+.flecheAccueil:hover ~ .carteUne
+{
+  animation: rotationCarteUne 6s infinite linear;
 }
 
 .carteUne 
 {
   background-color:#0f056b;
-  transform: translate(-50%,-80%) rotateY(0deg) translateZ(300px);
-  z-index: 10;
+  transform:translate(-50%,-60%) scale(1.1)  rotateY(0deg) translateZ(225px);
 }
 
 .carteDeux 
 {
   background-color:#0f056b;
-  transform: translate(-50%,-50%) rotateY(60deg) translateZ(180px) ;
+  transform: translate(-50%,-50%) rotateY(60deg) translateZ(205px) ;
   z-index: 1;
 
 }
@@ -904,14 +910,14 @@ footer a:visited{
 .carteTrois 
 {
   background-color: #0f056b;
-  transform: translate(-50%,-50%) rotateY(120deg) translateZ(180px);
+  transform: translate(-50%,-50%) rotateY(120deg) translateZ(205px);
   opacity:0.5;
 }
 
 .carteQuatre
 {
   background-color:#0f056b;
-  transform: translate(-50%,-50%) rotateY(180deg) translateZ(180px);
+  transform: translate(-50%,-50%) rotateY(180deg) translateZ(205px);
   opacity:0.5;
 
 
@@ -920,7 +926,7 @@ footer a:visited{
 .carteCinq
 {
   background-color:#0f056b;
-  transform: translate(-50%,-50%) rotateY(240deg) translateZ(180px);
+  transform: translate(-50%,-50%) rotateY(240deg) translateZ(205px);
   opacity:0.5;
 
 }
@@ -928,11 +934,48 @@ footer a:visited{
 .carteSix
 {
   background-color:#0f056b;
-  transform: translate(-50%,-50%) rotateY(300deg) translateZ(180px);
-  z-index: 1;
+  transform: translate(-50%,-50%) rotateY(300deg) translateZ(205px);
 
 }
 
+@keyframes rotationCarteUne {
+  0%, 100%
+  {
+    transform:translate(-50%,-60%) scale(1.1)  rotateY(0deg) translateZ(225px);
+    opacity: 1;
+
+  }
+
+  16.66%
+  {
+    transform: translate(-50%,-50%) rotateY(60deg) translateZ(205px) ;
+    opacity: 1;
+  }
+
+  33.33%
+  {
+    transform: translate(-50%,-50%) rotateY(120deg) translateZ(205px);
+    opacity:0.75;
+  }
+
+  50%
+  {
+    transform: translate(-50%,-50%) rotateY(180deg) translateZ(205px);
+    opacity:0.5;
+  }
+
+  66.66%
+  {
+    transform: translate(-50%,-50%) rotateY(240deg) translateZ(205px);
+    opacity:0.75;
+  }
+
+  83.33%
+  {
+    transform: translate(-50%,-50%) rotateY(300deg) translateZ(205px);
+    opacity: 1;
+  }
+}
 
 /* FIN PAGE D'ACCUEIL */
 
