@@ -529,7 +529,7 @@ header {
   }
   /*----------menu burger------------*/
   .burger-icon{
-    position: fixed;
+    position: absolute;
     z-index: 11;
   }
 
