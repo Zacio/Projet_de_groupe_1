@@ -1513,14 +1513,14 @@ img{
     position: absolute;
   }
   .burger-icon{
-    padding-right: 15px;
+    right: 50px;
   }
 }
 @media only screen and (max-width: 280px) {
-.burger-icon {
-  align-self: flex-end;
-  padding-right: 50px;
-}
+  .burger-icon{
+    position: absolute;
+    right: 50px;
+  }
 }
   /*
   html, body {
