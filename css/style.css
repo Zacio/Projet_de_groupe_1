@@ -882,21 +882,25 @@ footer a:visited{
   top:50%;
   left:50%;
   transform-style: preserve-3d;
-  height:125px;
-  width: 200px;
+  height:150px;
+  width: 225px;
+}
+
+.flecheAccueil:hover ~ .carteUne
+{
+  animation: rotationCarteUne 6s infinite linear;
 }
 
 .carteUne 
 {
   background-color:#0f056b;
-  transform: translate(-50%,-80%) rotateY(0deg) translateZ(300px);
-  z-index: 10;
+  transform:translate(-50%,-60%) scale(1.1)  rotateY(0deg) translateZ(225px);
 }
 
 .carteDeux 
 {
   background-color:#0f056b;
-  transform: translate(-50%,-50%) rotateY(60deg) translateZ(180px) ;
+  transform: translate(-50%,-50%) rotateY(60deg) translateZ(205px) ;
   z-index: 1;
 
 }
@@ -904,14 +908,14 @@ footer a:visited{
 .carteTrois 
 {
   background-color: #0f056b;
-  transform: translate(-50%,-50%) rotateY(120deg) translateZ(180px);
+  transform: translate(-50%,-50%) rotateY(120deg) translateZ(205px);
   opacity:0.5;
 }
 
 .carteQuatre
 {
   background-color:#0f056b;
-  transform: translate(-50%,-50%) rotateY(180deg) translateZ(180px);
+  transform: translate(-50%,-50%) rotateY(180deg) translateZ(205px);
   opacity:0.5;
 
 
@@ -920,7 +924,7 @@ footer a:visited{
 .carteCinq
 {
   background-color:#0f056b;
-  transform: translate(-50%,-50%) rotateY(240deg) translateZ(180px);
+  transform: translate(-50%,-50%) rotateY(240deg) translateZ(205px);
   opacity:0.5;
 
 }
@@ -928,11 +932,48 @@ footer a:visited{
 .carteSix
 {
   background-color:#0f056b;
-  transform: translate(-50%,-50%) rotateY(300deg) translateZ(180px);
-  z-index: 1;
+  transform: translate(-50%,-50%) rotateY(300deg) translateZ(205px);
 
 }
 
+@keyframes rotationCarteUne {
+  0%, 100%
+  {
+    transform:translate(-50%,-60%) scale(1.1)  rotateY(0deg) translateZ(225px);
+    opacity: 1;
+
+  }
+
+  16.66%
+  {
+    transform: translate(-50%,-50%) rotateY(60deg) translateZ(205px) ;
+    opacity: 1;
+  }
+
+  33.33%
+  {
+    transform: translate(-50%,-50%) rotateY(120deg) translateZ(205px);
+    opacity:0.75;
+  }
+
+  50%
+  {
+    transform: translate(-50%,-50%) rotateY(180deg) translateZ(205px);
+    opacity:0.5;
+  }
+
+  66.66%
+  {
+    transform: translate(-50%,-50%) rotateY(240deg) translateZ(205px);
+    opacity:0.75;
+  }
+
+  83.33%
+  {
+    transform: translate(-50%,-50%) rotateY(300deg) translateZ(205px);
+    opacity: 1;
+  }
+}
 
 /* FIN PAGE D'ACCUEIL */
 
