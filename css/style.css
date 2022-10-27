@@ -533,7 +533,7 @@ header {
     position: fixed;
     z-index: 11;
     top: 40px;
-    right: 10%;
+    right: 100px;
   }
 
   .burger-icon span {
