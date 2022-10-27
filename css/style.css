@@ -532,6 +532,8 @@ header {
   .burger-icon{
     position: fixed;
     z-index: 11;
+    top: 40px;
+    right: 10%;
   }
 
   .burger-icon span {
@@ -607,7 +609,6 @@ header {
     position: absolute;
     z-index: -1;
     bottom: 0;
-    text-align: center;
   }
   
   /* #openbtn{
@@ -1200,11 +1201,16 @@ img{
   transition-duration: 0.5s;
 }
 .navBackground {
-  width: fit-content;
+  width:105px;
   margin-top: 5px;
+  border-radius: 5px;
+  background-color:var(--backgroundNavBarnumero01);
 }
 .navBackground a {
-  color: var(--backgroundNavBarnumero01);
+  color: var(--textNavBar);
+  font-size: 18px;
+  width: fit-content;
+  padding-left: 5px;
 }
 
 
@@ -1246,12 +1252,13 @@ img{
     width: fit-content;
     margin-top: 0;
     background-color: var(--backgroundNavBarnumero01);
-    border: 3px solid white;
+    border: 3px solid rgb(255, 255, 255);
     border-radius: 10px;
-    padding: 0 2px 0 2px;
+    padding: 2px 5px 2px 5px;
   }
   .navBackground a {
     color: var(--textNavBar);
+    font-size: 15px;
   }
 }
   /*
