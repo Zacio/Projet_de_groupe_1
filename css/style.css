@@ -149,7 +149,7 @@ a, a:visited
 
 /*---------------------------------NavBar--------------------------------*/
 .pcTuneBaniere{
-  position:absolute;
+  position:fixed;
   margin: 0px;
   width: 99.5%;
   margin:auto;
@@ -189,7 +189,7 @@ header {
 }
 
 .sidenav{
-  position: absolute;
+  position: fixed;
   z-index: 6;
   height: 150px;
   width:99.5%;
@@ -523,13 +523,14 @@ header {
   }
   .pcTuneBaniere{
     top: 0px;
+    border: 3px solid var(--textNavBar);
   }
   .boiteFleche{
     border: none;
   }
   /*----------menu burger------------*/
   .burger-icon{
-    position: absolute;
+    position: fixed;
     z-index: 11;
   }
 
@@ -584,15 +585,16 @@ header {
     background-image: radial-gradient();
   }
   .sidenav{
-    left: 1%;
+    left: 0.5%;
     position: fixed;
     z-index: 4;
     height: 90%;
     width: 98%;
-    background-color: var(--backgroundNavBarnumero02);
+    background-color: var(--backgroundNavBarnumero01);
     background-image: none;
     top: -100%;
     transition: 0.5s linear;
+    border: 3px solid var(--textNavBar);
   }
   
   .sidenav.ok{
