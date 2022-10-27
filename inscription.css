@@ -787,7 +787,7 @@ h2{
       position: fixed;
       z-index: 11;
       top: 40px;
-      right: 20%;
+      right: 100px;
     }
   
     .burger-icon span {
@@ -1024,7 +1024,7 @@ h2{
       z-index: 1;
     }
     #categorieSideCat a{
-      font-size: 35px;
+      font-size: 20px;
     }
     #categorieSideCat a:hover{
       background: none;

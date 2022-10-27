@@ -533,7 +533,7 @@ header {
     position: fixed;
     z-index: 11;
     top: 40px;
-    right: 10%;
+    right: 100px;
   }
 
   .burger-icon span {
@@ -1361,6 +1361,21 @@ img{
   .navBackground a {
     color: var(--textNavBar);
     font-size: 15px;
+  }
+  .logo {
+    position: absolute;
+  }
+  .pcTuneBaniere {
+    position: absolute;
+  }
+  .burger-icon{
+    right: 50px;
+  }
+}
+@media only screen and (max-width: 280px) {
+  .burger-icon{
+    position: absolute;
+    right: 50px;
   }
 }
   /*
