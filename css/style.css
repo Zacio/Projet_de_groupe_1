@@ -127,10 +127,10 @@ a, a:visited
   text-decoration: none;
 }
 
-a:hover 
-{
-  font-size: 1.3em;  
-}
+/* a:hover  */
+/* { */
+  /* font-size: 1.3em;   */
+/* } */
 
 /* .bjbn, .abat */
 /* { */
