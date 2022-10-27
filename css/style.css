@@ -1080,9 +1080,14 @@ img{
   .navBackground {
     width: fit-content;
     margin-top: 0;
-    background-color: red;
+    background-color: var(--backgroundNavBarnumero01);
+    border: 3px solid white;
+    border-radius: 10px;
+    padding: 0 2px 0 2px;
   }
-
+  .navBackground a {
+    color: var(--textNavBar);
+  }
 }
   /*
   html, body {
