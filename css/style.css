@@ -154,6 +154,7 @@ a, a:visited
   top: 50px;
   z-index: 5;
   display: grid;
+  border: 3px solid var(--textNavBar);
   grid-template-rows: 1fr;
   grid-template-columns: repeat(2, minmax(1fr, 300px));
 }
