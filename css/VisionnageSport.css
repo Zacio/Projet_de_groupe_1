@@ -1,3 +1,22 @@
+    /* MODE PAR DEFAUT ou SCHEME LIGHT ou MODE CLAIR */
+:root, :root.clair{
+    
+    
+} 
+/* SCHEME DARK */
+
+@media (prefers-color-scheme: dark) 
+{
+  :root {
+  
+  }
+}
+
+    /* MODE SOMBRE */
+
+:root.sombre {
+   
+    
     /*Header left menu bar et Footer*/
     #mainVisionnage{
         display: grid;
