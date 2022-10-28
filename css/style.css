@@ -518,7 +518,8 @@ header {
   
 }
 
-@media all and (max-width:800px){
+@media all and (max-width:800px)
+{
   body{
     margin-top: 0px;
     background-color: var(--fondMax);
@@ -980,6 +981,47 @@ footer a:visited{
   transform: translate(-50%,-50%) rotateY(300deg) translateZ(175px);
 }
 
+
+  #body #headerAccueil .navAccueil
+  {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
+  #body #headerAccueil .navAccueil .sidenav 
+  {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border-top:none;
+    border-left:none;
+  }
+
+  #body #headerAccueil .navAccueil .sidenav ul 
+  {
+    
+    justify-content: center;
+    align-content: center;
+    border-top:none;
+    border-left:none;
+  }
+
+  #body #headerAccueil .navAccueil .sidenav ul li a
+  {
+    justify-self: center;
+    align-self: center;
+    font-size: 1.1rem;
+  }
+
+  #body #headerAccueil .navAccueil .sidenav #themeBox
+  {
+    left:50%;
+    top:70%;
+    transform: translate(-50%, -50%);
+  }
+
+  
 }
 
 /* GESTION DES CONTENANTS */
@@ -1010,14 +1052,15 @@ footer a:visited{
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   max-width: 100%;
 }
 
 #accueilBody 
 {
+  flex: 1 1 auto;
   background-color:var(--fondMax);
-  height: 500px;
+  height: auto;
   width: 1040px;
   display: grid;
   column-gap:2vw;
@@ -1049,8 +1092,13 @@ footer a:visited{
     top: 0;
     left:0;
     transition: 1s;
-    border: 5px solid var(--textNavBar);
-    border-top:none;
+    border-bottom: 5px solid var(--textNavBar);
+  }
+
+  /* #body #headerAccueil */
+  .navAccueil .sidenav ul li a */
+  {
+    font-size: 2.2rem;
   }
 
 .animauxAccueil, .dessinAccueil
@@ -1170,40 +1218,92 @@ box-shadow: 0 0 25px 10px #fffd;
 
 .carteUne 
 {
-  background-image:url(../img_sport/arstot.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
   transform:translate(-50%,-50%) rotateY(0deg) translateZ(205px);
 }
 
 .carteDeux 
 {
-  background-image:url(../img_sport/arstot.jpg);
   transform: translate(-50%,-50%) rotateY(60deg) translateZ(205px);
 }
 
 .carteTrois 
 {
-  background-image:url(../img_sport/arstot.jpg);  
   transform: translate(-50%,-50%) rotateY(120deg) translateZ(205px);
 }
 
 .carteQuatre
 {
-  background-image:url(../img_sport/arstot.jpg);
   transform: translate(-50%,-50%) rotateY(180deg) translateZ(205px);
 }
 
 .carteCinq
 {
-  background-image:url(../img_sport/arstot.jpg);
   transform: translate(-50%,-50%) rotateY(240deg) translateZ(205px);
 }
 
 .carteSix
 {
-  background-image:url(../img_sport/arstot.jpg);
   transform: translate(-50%,-50%) rotateY(300deg) translateZ(205px);
+}
+
+.carteUne.CarteAnimaux, .carteQuatre.CarteAnimaux
+{
+  background-image:url(/img/animaux1.jpg);
+} 
+
+.carteDeux.CarteAnimaux, .carteCinq.CarteAnimaux
+{
+  background-image:url(/img/animaux2.jpg);
+}
+
+.cartetrois.CarteAnimaux, .carteSix.CarteAnimaux
+{
+  background-image:url(/img/animaux3.jpg);
+}
+
+.carteUne.CarteDessin, .carteQuatre.CarteDessin
+{
+  background-image:url(/img/dessinanime1.jpg);
+} 
+
+.carteDeux.CarteDessin, .carteCinq.CarteDessin
+{
+  background-image:url(/img/dessinanime2.jpg);
+}
+
+.cartetrois.CarteDessin, .carteSix.CarteDessin
+{
+  background-image:url(/img/dessinanime3.jpg);
+}
+
+.carteUne.CarteHorreur, .carteQuatre.CarteHorreur
+{
+  background-image:url(/img/horreur1.jpg);
+} 
+
+.carteDeux.CarteHorreur, .carteCinq.CarteHorreur
+{
+  background-image:url(/img/horreur2.jpg);
+}
+
+.cartetrois.CarteHorreur, .carteSix.CarteHorreur
+{
+  background-image:url(/img/horreur3.jpg);
+}
+
+.carteUne.CarteSport, .carteQuatre.CarteSport
+{
+  background-image:url(/img/sport1.jpg);
+} 
+
+.carteDeux.CarteSport, .carteCinq.CarteSport
+{
+  background-image:url(/img/sport2.jpg);
+}
+
+.cartetrois.CarteSport, .carteSix.CarteSport
+{
+  background-image:url(/img/sport3.jpg);
 }
 
 /* LES BOUTONS DE SELCTIONS DE VIDEOS */
