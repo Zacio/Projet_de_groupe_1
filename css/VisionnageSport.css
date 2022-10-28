@@ -44,6 +44,14 @@
   --boutonEtTitre:rgb(243, 145, 145);
 }
 
+/* POLICE */
+@font-face 
+{
+	font-family: 'Leoscar';
+	src: url('/fonts/Leoscar.woff') format('woff');
+}
+/* FIN POLICE */
+
 /* SCHEME DARK */
 
 @media (prefers-color-scheme: dark) 
@@ -179,6 +187,7 @@ a, a:visited
 }
 
 body{
+  font-family: 'Leoscar', sans-serif;
   background-color: var(--fondMax);
   display: flex;
   width:100%;
