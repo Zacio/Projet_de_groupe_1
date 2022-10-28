@@ -45,7 +45,7 @@
 @font-face 
 {
 	font-family: 'Leoscar';
-	src: url('/fonts/Leoscar.ttf') format('ttf')
+	src: url('/fonts/Leoscar.woff') format('woff');
 }
 
 /* SCHEME DARK */
