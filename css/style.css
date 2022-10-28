@@ -40,6 +40,13 @@
   --logoBackfaceAccueil:url(../img/logoCarrouselClair.png)
 
 }
+/* POLICE */
+
+@font-face 
+{
+	font-family: 'Leoscar';
+	src: url('/fonts/Leoscar.ttf') format('ttf')
+}
 
 /* SCHEME DARK */
 
@@ -169,6 +176,7 @@ a, a:visited
 }
 
 body{
+  font-family: 'Leoscar', sans-serif;
   background-color: var(--fondMax);
   display: flex;
   width:100%;
