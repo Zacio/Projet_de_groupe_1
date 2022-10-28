@@ -907,6 +907,11 @@ footer a:visited{
     animation: rotationCarrouselSmartphone 20s infinite linear;
   }
 
+  #accueilBody .contAccueil .carrouselAccueil .carteAccueil:hover
+  {
+  box-shadow: 0 0 25px 10px var(--fondMin);
+  }
+
   #body #accueilBody .contAccueil .carrouselAccueil .carteAccueil
 {
   display: flex;
