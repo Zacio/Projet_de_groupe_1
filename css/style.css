@@ -857,8 +857,13 @@ footer a:visited{
   align-items: center;
 }
 
-@media only screen and (max-width: 1080px) 
+@media only screen and (max-width: 800px) 
 {
+  #body #headerAccueil .navAccueil
+  {
+    display: none;
+  }
+
   #accueilBody 
   {
   grid-template-columns: 100%;
@@ -888,6 +893,7 @@ footer a:visited{
     height:12vh;
     transition: 1s;
     flex:none;
+    z-index: 1;
   }
 
   .accueilBody header.ok
@@ -905,6 +911,126 @@ footer a:visited{
     opacity:0.9;
     height: 87vh;
   }
+
+  #accueilBody .contAccueil .barreHaut
+  {
+  position: absolute;
+  background: radial-gradient(ellipse farthest-side at 50% 20%, var(--effetCarrousel) 0%, var(--fondMax) 200%);
+  border:none;
+  border-radius: 0;
+  box-shadow: 0 0 5px 0 var(--effetCarrouselRadius);
+  height:105%;
+  width:20px;
+  top:-5%;
+  left:50%;
+  transform: translate(-50%, 0);
+  }
+  
+  #accueilBody .contAccueil .barreBas
+  {
+  position: absolute;
+  background: radial-gradient(ellipse farthest-side at 50% 20%, var(--effetCarrousel) 0%, var(--fondMax) 200%);
+  border:none;
+  border-radius: 0;
+  box-shadow: 0 0 5px 0 var(--effetCarrouselRadius);
+  height:110%;
+  width:20px;
+  top:0%;
+  left:50%;
+  transform: translate(-50%, 0);
+  }
+
+  #accueilBody .contAccueil
+  {
+    perspective-origin: top;
+    perspective: 800px;
+    background: radial-gradient(ellipse closest-side at 50% 50%, var(--effetCarrousel) 0%, var(--fondMax) 100%);
+
+  }
+
+  #accueilBody .contAccueil .carrouselAccueil
+  {
+    transform:translate(-50%,-50%) rotateY(0deg) translate3d(0px, -10px, 0px);
+    cursor: pointer;
+  }
+
+  #accueilBody .contAccueil .carrouselAccueil:hover
+  {
+    animation: rotationCarrouselSmartphone 20s infinite linear;
+  }
+
+.carrouselAccueil .carteAccueil
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform-style: preserve-3d;
+  height:100px;
+  width: 170px;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 35px;
+  box-shadow: 0 0 8px 2px var(--effetCarrouselRadius);
+  backface-visibility: hidden;
+}
+
+.carrouselAccueil .carteAccueil:after
+{
+  content:"";
+  background-image:url(../img/logoCarrousel.png);
+  background-size:auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity:.75;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform-style: preserve-3d;
+  height:100px;
+  width: 170px;
+  border-radius: 35px;
+  backface-visibility: hidden;
+  box-shadow: 0 0 8px 2px var(--effetCarrouselRadius);
+  transform:translate(-50%,-50%) rotateY(180deg);
+  
+}
+
+.carrouselAccueil .carteUne 
+{
+  transform:translate(-50%,-50%) rotateY(0deg) translateZ(175px);
+}
+
+.carrouselAccueil .carteDeux 
+{
+  transform: translate(-50%,-50%) rotateY(60deg) translateZ(175px);
+}
+
+.carrouselAccueil .carteTrois 
+{
+  transform: translate(-50%,-50%) rotateY(120deg) translateZ(175px);
+}
+
+.carrouselAccueil .carteQuatre
+{
+  transform: translate(-50%,-50%) rotateY(180deg) translateZ(175px);
+}
+
+.carrouselAccueil .carteCinq
+{
+  transform: translate(-50%,-50%) rotateY(240deg) translateZ(175px);
+}
+
+.carrouselAccueil .carteSix
+{
+  transform: translate(-50%,-50%) rotateY(300deg) translateZ(175px);
+}
 
 }
 
@@ -1119,6 +1245,24 @@ box-shadow: 0 0 25px 10px #fffd;
   100%
   {
     transform: translate(-50%,-50%) rotateY(360deg)  translate3d(0px, -40px, 0px);
+  }
+}
+
+@keyframes rotationCarrouselSmartphone 
+{
+  0%
+  {
+    transform:translate(-50%,-50%) rotateY(0deg)  translate3d(0px, -10px, 0px);
+  }
+
+  50%
+  {
+    transform: translate(-50%,-50%) rotateY(180deg)  translate3d(0px, -10px, 0px);
+  }
+
+  100%
+  {
+    transform: translate(-50%,-50%) rotateY(360deg)  translate3d(0px, -10px, 0px);
   }
 }
 
@@ -1672,4 +1816,3 @@ input#connnexionCheckbox {
   height: 96%;
   width: 98%;
 }
-
