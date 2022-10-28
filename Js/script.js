@@ -92,17 +92,23 @@ function themeSwapDesk() {
 
 //Micael ajout flechenav (nico)
 
-var sidenav = document.getElementById("mySidenav")
-var flechenav = document.getElementById("ouvrezMoi")
-var opentest = document.getElementById("openbtn")
-var closetest = document.getElementById("closebtn")
-var menuBurgerBouton = document.getElementById("openBtnBurger")
-var burgerspan = document.getElementById("burgerspan")
-var bodyColor = document.getElementById("body")
+let sidenav = document.getElementById("mySidenav");
+let flechenav = document.getElementById("ouvrezMoi");
+let opentest = document.getElementById("openbtn");
+let closetest = document.getElementById("closebtn");
+let menuBurgerBouton = document.getElementById("openBtnBurger");
+let burgerspan = document.getElementById("burgerspan");
+let bodyColor = document.getElementById("body");
+let catTel = document.getElementById("categorieSideCat");
+let catbarTel = document.getElementById("categorieNavBar");
 
-opentest.onclick = openandclosenav;
-menuBurgerBouton.onclick = openandclosenav
-
+catbarTel.onclick = function functionopenCate(){
+  if(catTel.classList.contains("opencat")){
+    catTel.classList.remove("opencat");
+  }else{
+    catTel.classList.add("opencat");
+  }
+};
 
 function openandclosenav(){
     if(sidenav.classList.contains("ok")){
@@ -121,8 +127,7 @@ function openandclosenav(){
 
 
 //Tornike// 
-/*
-var prevScrollpos = window.pageYOffset;
+/*var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
 var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
@@ -131,6 +136,17 @@ var currentScrollPos = window.pageYOffset;
     document.getElementById("mySidenav").style.top = "-150px";
   }
   prevScrollpos = currentScrollPos;
-}
-*/
+}*/
 //Tornike 
+var prevScrollpos = window.pageYOffset;
+window.onscroll = scrollBar;
+function scrollBar() {
+  var currentScrollPos = window.pageYOffset;
+  document.getElementById("mySidenav").style.top =  "0";
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementById("mySidenav").style.top =  "0";
+    } else {
+      document.getElementById("mySidenav").style.top =  "-100px";
+    }
+    prevScrollpos = currentScrollPos;
+}
