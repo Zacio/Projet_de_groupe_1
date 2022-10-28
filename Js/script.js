@@ -101,6 +101,7 @@ let burgerspan = document.getElementById("burgerspan");
 let bodyColor = document.getElementById("body");
 let catTel = document.getElementById("categorieSideCat");
 let catbarTel = document.getElementById("categorieNavBar");
+var headerAccueil = document.getElementById("headerAccueil")
 
 catbarTel.onclick = function functionopenCate(){
   if(catTel.classList.contains("opencat")){
@@ -111,17 +112,21 @@ catbarTel.onclick = function functionopenCate(){
 };
 
 function openandclosenav(){
-    if(sidenav.classList.contains("ok")){
+    if(sidenav.classList.contains("ok"))
+    {
         sidenav.classList.remove("ok")
         flechenav.classList.remove("ok")
         burgerspan.classList.remove("ok")
         bodyColor.classList.remove("ok")
+        headerAccueil.classList.remove("ok")
     }
-    else{
+    else
+    {
         sidenav.classList.add("ok")
         flechenav.classList.add("ok")
         burgerspan.classList.add("ok")
         bodyColor.classList.add("ok")
+        headerAccueil.classList.add("ok")
     }
 }
 

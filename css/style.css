@@ -87,12 +87,7 @@
     --effetCarrouselRadius:#70f9f0;
 
     --logoBackfaceAccueil:url(../img/logoCarrouselSombre.png)
-
-
   }
-  
-
-
 }
 
 /* MODE SOMBRE */
@@ -136,8 +131,6 @@
   --effetCarrousel:#32f6e9;
   --effetCarrouselRadius:#70f9f0;
   --logoBackfaceAccueil:url(../img/logoCarrouselSombre.png)
-
-
 }
 
 /* COMMANDES GLOBALES */
@@ -149,26 +142,6 @@ a, a:visited
   font-weight: bold;
   text-decoration: none;
 }
-
-/* a:hover  */
-/* { */
-  /* font-size: 1.3em;   */
-/* } */
-
-/* .bjbn, .abat */
-/* { */
-  /* text-align: center; */
-  /* height:50px; */
-  /* width: 300px; */
-  /* border-radius: 100px; */
-  /* padding-top: 10px; */
-  /* margin-top:20px ; */
-  /* background-color:var(--fondMed); */
-  /* border:solid var(--texteMax) 5px; */
-/* } */
-
-
-
 
 /*---------------------------------NavBar--------------------------------*/
 .pcTuneBaniere{
@@ -222,7 +195,6 @@ header {
   left:0.25%;
   transition: 1s;
   border-bottom: 5px solid var(--textNavBar);
-
 }
 /* .sidenav.ok{ */
   /* top: 0px; */
@@ -798,6 +770,7 @@ header {
     background: none;
   }
 }
+
 /*-------------------------------NavBar---------------------------------*/
 
 
@@ -837,23 +810,55 @@ footer a:visited{
 
 /* ----------------------------------------------------------------------- PAGE D'ACCUEIL ----------------------------------------------------------------------- */
 
+/* GENERALITES */
+
+.accueilBody header
+{
+  height:55px;
+  transition: 1s;
+  flex:none;
+}
+
+.accueilBody header.ok
+{
+  height:155px;
+}
+
+.accueilBody .pcTuneBaniere
+{
+  display: none;
+}
+
+.accueilBody
+{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  max-width: 100%;
+}
+
 #accueilBody 
 {
   background-color:var(--fondMax);
   height: 100%;
-  min-height: 80%;
-  width: 100%;
+  width: 1040;
   display: grid;
-  grid-template-columns: minmax(500px, 800px) minmax(500px, 800px);
+  column-gap:2vw;
+  grid-template-columns: 520px 520px;
   grid-template-rows: repeat(1fr);
-  padding-top: 0.5%;
-  padding-bottom: 0.5%;
-  justify-content: center;
-
+  justify-items: center;
+  align-items: center;
 }
 
-@media only screen and (max-width: 1080px) 
+@media only screen and (max-width: 800px) 
 {
+  #body #headerAccueil .navAccueil
+  {
+    display: none;
+  }
+
   #accueilBody 
   {
   grid-template-columns: 100%;
@@ -878,38 +883,183 @@ footer a:visited{
     max-width: 50%;
   }
 
-  .contAccueil label
+  .accueilBody header
   {
-    display: none;
+    height:12vh;
+    transition: 1s;
+    flex:none;
+    z-index: 1;
   }
 
+  .accueilBody header.ok
+  {
+    height:12vh;
+  }
+
+  .navAccueil p .burger-icon span 
+  {
+    background-color: var(--fondMax);
+  }
+
+  .navAccueil .sidenav
+  {
+    opacity:0.9;
+    height: 87vh;
+  }
+
+  #accueilBody .contAccueil .barreHaut
+  {
+  position: absolute;
+  background: radial-gradient(ellipse farthest-side at 50% 20%, var(--effetCarrousel) 0%, var(--fondMax) 200%);
+  border:none;
+  border-radius: 0;
+  box-shadow: 0 0 5px 0 var(--effetCarrouselRadius);
+  height:105%;
+  width:20px;
+  top:-5%;
+  left:50%;
+  transform: translate(-50%, 0);
+  }
+  
+  #accueilBody .contAccueil .barreBas
+  {
+  position: absolute;
+  background: radial-gradient(ellipse farthest-side at 50% 20%, var(--effetCarrousel) 0%, var(--fondMax) 200%);
+  border:none;
+  border-radius: 0;
+  box-shadow: 0 0 5px 0 var(--effetCarrouselRadius);
+  height:110%;
+  width:20px;
+  top:0%;
+  left:50%;
+  transform: translate(-50%, 0);
+  }
+
+  #accueilBody .contAccueil
+  {
+    perspective-origin: top;
+    perspective: 800px;
+    background: radial-gradient(ellipse closest-side at 50% 50%, var(--effetCarrousel) 0%, var(--fondMax) 100%);
+
+  }
+
+  #accueilBody .contAccueil .carrouselAccueil
+  {
+    transform:translate(-50%,-50%) rotateY(0deg) translate3d(0px, -10px, 0px);
+    cursor: pointer;
+  }
+
+  #accueilBody .contAccueil .carrouselAccueil:hover
+  {
+    animation: rotationCarrouselSmartphone 20s infinite linear;
+  }
+
+.carrouselAccueil .carteAccueil
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform-style: preserve-3d;
+  height:100px;
+  width: 170px;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 35px;
+  box-shadow: 0 0 8px 2px var(--effetCarrouselRadius);
+  backface-visibility: hidden;
 }
 
-.contAccueil input
+.carrouselAccueil .carteAccueil:after
 {
-  display: none;
+  content:"";
+  background-image:url(../img/logoCarrousel.png);
+  background-size:auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity:.75;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform-style: preserve-3d;
+  height:100px;
+  width: 170px;
+  border-radius: 35px;
+  backface-visibility: hidden;
+  box-shadow: 0 0 8px 2px var(--effetCarrouselRadius);
+  transform:translate(-50%,-50%) rotateY(180deg);
+  
+}
+
+.carrouselAccueil .carteUne 
+{
+  transform:translate(-50%,-50%) rotateY(0deg) translateZ(175px);
+}
+
+.carrouselAccueil .carteDeux 
+{
+  transform: translate(-50%,-50%) rotateY(60deg) translateZ(175px);
+}
+
+.carrouselAccueil .carteTrois 
+{
+  transform: translate(-50%,-50%) rotateY(120deg) translateZ(175px);
+}
+
+.carrouselAccueil .carteQuatre
+{
+  transform: translate(-50%,-50%) rotateY(180deg) translateZ(175px);
+}
+
+.carrouselAccueil .carteCinq
+{
+  transform: translate(-50%,-50%) rotateY(240deg) translateZ(175px);
+}
+
+.carrouselAccueil .carteSix
+{
+  transform: translate(-50%,-50%) rotateY(300deg) translateZ(175px);
+}
+
 }
 
 /* GESTION DES CONTENANTS */
 
 .contAccueil
 {
-  height:250px;
-  width:clamp(520px, 42vw, 800px);
-  margin:auto;
+  height: 100%;
+  width: 520px;
+  max-width: 520px;
+}
 
+.carrouselAccueil
+{
+  transform-style: preserve-3d;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  height: 250px;
+  width: 520px;
+  max-height: 250px;
+  max-width: 520px;
 }
 
 .animauxAccueil, .dessinAccueil
 {
-  perspective: 900px;
+  perspective: 1200px;
   perspective-origin: bottom;
   background: radial-gradient(ellipse closest-side at 50% 20%, var(--effetCarrousel) 0%, var(--fondMax) 100%);
 }
 
 .horreurAccueil, .sportAccueil
 {
-  perspective: 900px;
+  perspective: 1200px;
   perspective-origin: top;
   background: radial-gradient(ellipse closest-side at 50% 80%, var(--effetCarrousel) 0%, var(--fondMax) 100%);
 }
@@ -942,16 +1092,6 @@ footer a:visited{
   transform: translate(-50%, 0);
 }
 
-.carrouselAccueil
-{
-  transform-style: preserve-3d;
-  position: absolute;
-  top:50%;
-  left: 50%;
-  height: 100%;
-  width: 100%;
-}
-
 .animauxAccueil .carrouselAccueil:hover, .dessinAccueil .carrouselAccueil:hover
 {
   animation: rotationCarrouselHaut 20s infinite linear;
@@ -964,13 +1104,13 @@ footer a:visited{
 
 .animauxAccueil .carrouselAccueil, .dessinAccueil .carrouselAccueil
 {
-  transform:translate(-50%,-50%) rotateY(0deg) translate3d(0px, 35px, 0px);
+  transform:translate(-50%,-50%) rotateY(0deg) translate3d(0px, 40px, 0px);
   cursor: pointer;
 }
 
 .horreurAccueil .carrouselAccueil, .sportAccueil .carrouselAccueil 
 {
-  transform:translate(-50%,-50%) rotateY(0deg) translate3d(0px, -35px, 0px);
+  transform:translate(-50%,-50%) rotateY(0deg) translate3d(0px, -40px, 0px);
   cursor: pointer;
 }
 
@@ -1011,12 +1151,12 @@ footer a:visited{
   top:50%;
   left:50%;
   transform-style: preserve-3d;
-  height:110px;
-  width: 180px;
+  height:120px;
+  width: 190px;
   border-radius: 35px;
   backface-visibility: hidden;
   box-shadow: 0 0 10px 3px var(--effetCarrouselRadius);
-  transform:translate(-50%,-50%) scale(1.2) rotateY(180deg);
+  transform:translate(-50%,-50%) rotateY(180deg);
   
 }
 
@@ -1065,82 +1205,23 @@ box-shadow: 0 0 25px 10px #fffd;
 
 /* LES BOUTONS DE SELCTIONS DE VIDEOS */
 
-/* .contAccueil label
-{
-  position: absolute;
-  top:50%;
-  left:0%;
-  transform: translate(-50%, -50%);
-  height: 15px;
-  width: 15px;
-}
-
-.flecheAccueil
-{
-  position: absolute;
-  left:0%;
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
-  border: 7px solid black;
-  border-bottom: none;
-  border-left:none;
-  height: 15px;
-  width: 15px;
-  transition: 0.8s;
-  cursor: pointer;
-}
-.flecheAccueil:nth-child(1)
-{
-  left:-12px;
-  top:50%;
-} */
-/* 
-#animauxCheckbox:checked ~ label .flecheAnimaux:nth-child(1)
-{
-  transform: translate(-50%, -50%) rotate(0deg);
-  border: 7px solid black;
-  height: 25px;
-  width: 20px;
-  border-top: none;
-  border-left:none;
-  border-bottom: none;
-}
-
-#animauxCheckbox:checked ~ label .flecheAnimaux:nth-child(2)
-{
-  transform: translate(-50%, -50%) rotate(0deg);
-  height: 25px;
-  width: 20px;
-  border: 7px solid black;
-  border-top: none;
-  border-right:none;
-  border-bottom: none;
-} */
-
-.contAccueil label:hover .flecheAccueil
-{
-  border: 8px solid black;
-  border-bottom: none;
-  border-left:none;
-}
-
 /* L'ANIMATION DU CARROUSEL */
 
 @keyframes rotationCarrouselHaut 
 {
   0%
   {
-    transform:translate(-50%,-50%) rotateY(0deg) translate3d(0px, 35px, 0px);
+    transform:translate(-50%,-50%) rotateY(0deg) translate3d(0px, 40px, 0px);
   }
 
   50%
   {
-    transform: translate(-50%,-50%) rotateY(180deg) translate3d(0px, 35px, 0px);
+    transform: translate(-50%,-50%) rotateY(180deg) translate3d(0px, 40px, 0px);
   }
 
   100%
   {
-    transform: translate(-50%,-50%) rotateY(360deg) translate3d(0px, 35px, 0px);
+    transform: translate(-50%,-50%) rotateY(360deg) translate3d(0px, 40px, 0px);
   }
 }
 
@@ -1148,28 +1229,36 @@ box-shadow: 0 0 25px 10px #fffd;
 {
   0%
   {
-    transform:translate(-50%,-50%) rotateY(0deg)  translate3d(0px, -35px, 0px);
+    transform:translate(-50%,-50%) rotateY(0deg)  translate3d(0px, -40px, 0px);
   }
 
   50%
   {
-    transform: translate(-50%,-50%) rotateY(180deg)  translate3d(0px, -35px, 0px);
+    transform: translate(-50%,-50%) rotateY(180deg)  translate3d(0px, -40px, 0px);
   }
 
   100%
   {
-    transform: translate(-50%,-50%) rotateY(360deg)  translate3d(0px, -35px, 0px);
+    transform: translate(-50%,-50%) rotateY(360deg)  translate3d(0px, -40px, 0px);
   }
 }
 
-#animauxCheckbox:checked ~ .carrouselAccueil, #dessinCheckbox:checked ~ .carrouselAccueil
+@keyframes rotationCarrouselSmartphone 
 {
-  animation: rotationCarrouselHaut none;
-}
+  0%
+  {
+    transform:translate(-50%,-50%) rotateY(0deg)  translate3d(0px, -10px, 0px);
+  }
 
-#horreurCheckbox:checked ~ .carrouselAccueil, #sportCheckbox:checked ~ .carrouselAccueil
-{
-  animation: rotationCarrouselbas none;
+  50%
+  {
+    transform: translate(-50%,-50%) rotateY(180deg)  translate3d(0px, -10px, 0px);
+  }
+
+  100%
+  {
+    transform: translate(-50%,-50%) rotateY(360deg)  translate3d(0px, -10px, 0px);
+  }
 }
 
 /* FIN PAGE D'ACCUEIL */
@@ -1315,6 +1404,31 @@ img{
   border-radius: 20px 20px 0 0;
   opacity: 0.5;
 }
+#disneyLogo {
+  padding-top: 15px;
+  width: 150px;
+}
+.pixarLogo {
+  height: 150px;
+  width: 300px;
+  align-self: center;
+}
+.marvelLogo {
+  height: 100px;
+  width: 200px;
+  align-self: center;
+}
+.blueSkyLogo {
+  padding-top: 5px;
+  height: 100px;
+  width: 200px;
+  align-self: center;
+}
+.teamLogo {
+  height: 100px;
+  width: 100px;
+  align-self: center;
+}
 
 /*
 #arsenalCard>.imageContainer:after{
@@ -1374,11 +1488,6 @@ img{
   height: 1px;
   background-image: linear-gradient(to right, rgba(1, 0, 0, 0), rgb(120, 18, 18), rgba(16, 1, 1, 0));
 }
-.teamLogo {
-  height: 100px;
-  width: 100px;
-  align-self: center;
-}
 
 .navDesign {
   display: flex;
@@ -1408,6 +1517,7 @@ img{
   font-size: 18px;
   width: fit-content;
   padding-left: 5px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 
@@ -1453,10 +1563,12 @@ img{
     background-color: var(--backgroundNavBarnumero01);
     border-radius: 10px;
     padding: 4px;
+
   }
   .navBackground a {
     color: var(--textNavBar);
     font-size: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
   .logo {
     position: absolute;
@@ -1696,4 +1808,3 @@ input#connnexionCheckbox {
   height: 96%;
   width: 98%;
 }
-

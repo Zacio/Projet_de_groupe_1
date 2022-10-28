@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body id="body" onload="themeSwap()">
-    <header>
+<body id="body" class="accueilBody" onload="themeSwap()">
+    <header id="headerAccueil">
         <div class="pcTuneBaniere">
             <div class="logo">
 
             </div>
         </div>
-        <nav>
+        <nav class="navAccueil">
             <!-- BOUTON THEME SOMBRE DEBUT (Nico) -->
 
             <!-- BOUTON THEME SOMBRE FIN (Nico) -->
@@ -67,16 +67,9 @@
     </header>
 
     <section id="accueilBody">
+
         <div class="animauxAccueil contAccueil">
-
             <span class="barreHaut barreGauche"></span>
-
-            <input type="checkbox" id="animauxCheckbox" />
-            <label for="animauxCheckbox" class="accueilCheckbox animauxCheckbox">
-                <span class="flecheAccueil flecheAnimaux"></span>
-                <span class="flecheAccueil flecheAnimaux"></span>
-            </label>
-
             <div class="carrouselAccueil">
                 <span class="carteAccueil carteUne CarteAnimaux">1</span>
                 <span class="carteAccueil carteDeux CarteAnimaux">2</span>
@@ -85,19 +78,10 @@
                 <span class="carteAccueil carteCinq CarteAnimaux">5</span>
                 <span class="carteAccueil carteSix CarteAnimaux">6</span>
             </div>
-
         </div>
 
         <div class="dessinAccueil contAccueil">
-
             <span class="barreHaut barreDroite"></span>
-
-            <input type="checkbox" id="dessinCheckbox" />
-            <label for="dessinCheckbox" class="accueilCheckbox dessinCheckbox">
-                <span class="flecheAccueil"></span>
-                <span class="flecheAccueil"></span>
-            </label>
-
             <div class="carrouselAccueil">
                 <span class="carteAccueil carteUne CarteDessin">1</span>
                 <span class="carteAccueil carteDeux CarteDessin">2</span>
@@ -106,20 +90,10 @@
                 <span class="carteAccueil carteCinq CarteDessin">5</span>
                 <span class="carteAccueil carteSix CarteDessin">6</span>
             </div>
-
         </div>
 
         <div class="horreurAccueil contAccueil">
-
-            <input type="checkbox" id="horreurCheckbox" />
-
             <span class="barreBas barreGauche"></span>
-
-            <label for="horreurCheckbox" class="accueilCheckbox horreurCheckbox">
-                <span class="flecheAccueil"></span>
-                <span class="flecheAccueil"></span>
-            </label>
-
             <div class="carrouselAccueil">
                 <span class="carteAccueil carteUne CarteHorreur">1</span>
                 <span class="carteAccueil carteDeux CarteHorreur">2</span>
@@ -128,19 +102,10 @@
                 <span class="carteAccueil carteCinq CarteHorreur">5</span>
                 <span class="carteAccueil carteSix CarteHorreur">6</span>
             </div>
-
         </div>
 
         <div class="sportAccueil contAccueil">
-
             <span class="barreBas barreDroite"></span>
-
-            <input type="checkbox" id="sportCheckbox" />
-            <label for="sportCheckbox" class="accueilCheckbox sportCheckbox">
-                <span class="flecheAccueil"></span>
-                <span class="flecheAccueil"></span>
-            </label>
-
             <div class="carrouselAccueil">
                 <span class="carteAccueil carteUne CarteSport">1</span>
                 <span class="carteAccueil carteDeux CarteSport">2</span>
@@ -149,7 +114,6 @@
                 <span class="carteAccueil carteCinq CarteSport">5</span>
                 <span class="carteAccueil carteSix CarteSport">6</span>
             </div>
-
         </div>
 
 
