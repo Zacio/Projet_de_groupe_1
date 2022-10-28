@@ -32,6 +32,13 @@
   --connexionMain:#dcd9cb;
   --connexionButton:#fff6d9;
   --serpent:#0f056b;
+
+    /*-----------------Page d'accueil------------------*/
+  
+  --effetCarrousel:#0c2485;
+  --effetCarrouselRadius:#16235a;
+  --logoBackfaceAccueil:url(../img/logoCarrouselClair.png)
+
 }
 
 /* SCHEME DARK */
@@ -71,6 +78,16 @@
     --connexionMain:#373266;
     --connexionButton:#0f056b;
     --serpent:#32f6e9;
+    
+
+
+          /*-----------------Page d'accueil------------------*/
+
+    --effetCarrousel:#32f6e9;
+    --effetCarrouselRadius:#70f9f0;
+
+    --logoBackfaceAccueil:url(../img/logoCarrouselSombre.png)
+
 
   }
   
@@ -113,6 +130,12 @@
   --connexionMain:#373266;
   --connexionButton:#0f056b;
   --serpent:#32f6e9;
+
+        /*-----------------Page d'accueil------------------*/
+
+  --effetCarrousel:#32f6e9;
+  --effetCarrouselRadius:#70f9f0;
+  --logoBackfaceAccueil:url(../img/logoCarrouselSombre.png)
 
 
 }
@@ -820,7 +843,7 @@ footer a:visited{
 
 #accueilBody 
 {
-  background-color: blue;
+  background-color:var(--fondMax);
   height: 100%;
   min-height: 80%;
   width: 100%;
@@ -829,7 +852,6 @@ footer a:visited{
   grid-template-rows: repeat(1fr);
   padding-top: 0.5%;
   padding-bottom: 0.5%;
-  grid-gap:10px;
   justify-content: center;
 
 }
@@ -837,91 +859,91 @@ footer a:visited{
 @media only screen and (max-width: 1080px) 
 {
   #accueilBody 
-{
-  grid-template-columns: minmax(500px, 800px);
-}
+  {
+  grid-template-columns: 100%;
+  grid-template-rows: 200px 200px 200px 200px;
+  }
+
+  .contAccueil
+  {
+  max-width: 100%;
+  max-height: 100%;
+  }
+
+  .carteAccueil
+  {
+    max-height: 40%;
+    max-width: 50%;
+  }
+
+  .carteAccueil:after
+  {
+    max-height: 40%;
+    max-width: 50%;
+  }
+
+  .contAccueil label
+  {
+    display: none;
+  }
+
 }
 
-.contAccueil label
+.contAccueil input
 {
-  position: absolute;
-  top:50%;
-  left:0%;
-  transform: translate(-50%, -50%);
-  height: 15px;
-  width: 15px;
+  display: none;
 }
 
-.flecheAccueil
-{
-  position: absolute;
-  left:0%;
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
-  border: 7px solid black;
-  border-bottom: none;
-  border-left:none;
-  height: 15px;
-  width: 15px;
-  transition: 0.8s;
-  cursor: pointer;
-}
-.flecheAccueil:nth-child(1)
-{
-  left:-12px;
-  top:50%;
-}
-
-#animauxCheckbox:checked ~ label .flecheAnimaux:nth-child(1)
-{
-  transform: translate(-50%, -50%) rotate(0deg);
-  border: 7px solid black;
-  height: 25px;
-  width: 20px;
-  border-top: none;
-  border-left:none;
-  border-bottom: none;
-}
-
-#animauxCheckbox:checked ~ label .flecheAnimaux:nth-child(2)
-{
-  transform: translate(-50%, -50%) rotate(0deg);
-  height: 25px;
-  width: 20px;
-  border: 7px solid black;
-  border-top: none;
-  border-right:none;
-  border-bottom: none;
-}
-
-
-
-.contAccueil label:hover .flecheAccueil
-{
-  border: 8px solid black;
-  border-bottom: none;
-  border-left:none;
-}
+/* GESTION DES CONTENANTS */
 
 .contAccueil
 {
-  background-color: #373266;
-  border:2px solid black;
-  height:200px;
+  height:250px;
   width:clamp(520px, 42vw, 800px);
   margin:auto;
+
 }
 
 .animauxAccueil, .dessinAccueil
 {
   perspective: 900px;
   perspective-origin: bottom;
+  background: radial-gradient(ellipse closest-side at 50% 20%, var(--effetCarrousel) 0%, var(--fondMax) 100%);
 }
 
 .horreurAccueil, .sportAccueil
 {
   perspective: 900px;
   perspective-origin: top;
+  background: radial-gradient(ellipse closest-side at 50% 80%, var(--effetCarrousel) 0%, var(--fondMax) 100%);
+}
+
+.barreHaut
+{
+  position: absolute;
+  background: radial-gradient(ellipse farthest-side at 50% 20%, var(--effetCarrousel) 0%, var(--fondMax) 200%);
+  border:none;
+  border-radius: 33% 33% 0 0;
+  box-shadow: 0 0 10px 0 var(--effetCarrouselRadius);
+  height:75%;
+  width:25px;
+  top:25%;
+  left:50%;
+  transform: translate(-50%, 0);
+}
+
+.barreBas
+{
+  position: absolute;
+  background: radial-gradient(ellipse farthest-side at 50% 80%, var(--effetCarrousel) 0%, var(--fondMax) 200%);
+  border:none;
+  border-radius: 0% 0% 33% 33%;
+  box-shadow: 0 0 15px 0 var(--effetCarrouselRadius);  
+  height: 75%;
+  width:25px;
+  top:0%;
+  left:50%;
+  transform: translate(-50%, 0);
 }
 
 .carrouselAccueil
@@ -934,17 +956,30 @@ footer a:visited{
   width: 100%;
 }
 
-.animauxAccueil .carrouselAccueil, .dessinAccueil .carrouselAccueil 
+.animauxAccueil .carrouselAccueil:hover, .dessinAccueil .carrouselAccueil:hover
 {
   animation: rotationCarrouselHaut 20s infinite linear;
-  transform:translate(-50%,-50%) rotateY(0deg) translate3d(0px, 15px, 0px);
+}
+
+.horreurAccueil .carrouselAccueil:hover, .sportAccueil .carrouselAccueil:hover 
+{
+  animation: rotationCarrouselBas 20s infinite linear;
+}
+
+.animauxAccueil .carrouselAccueil, .dessinAccueil .carrouselAccueil
+{
+  transform:translate(-50%,-50%) rotateY(0deg) translate3d(0px, 35px, 0px);
+  cursor: pointer;
 }
 
 .horreurAccueil .carrouselAccueil, .sportAccueil .carrouselAccueil 
 {
-  animation: rotationCarrouselBas 20s infinite linear;
-  transform:translate(-50%,-50%) rotateY(0deg) translate3d(0px, -15px, 0px);
+  transform:translate(-50%,-50%) rotateY(0deg) translate3d(0px, -35px, 0px);
+  cursor: pointer;
 }
+
+/* LES VIDEOS DANS LE CARROUSEL */
+
 
 .carteAccueil
 {
@@ -961,7 +996,7 @@ footer a:visited{
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 35px;
-  box-shadow: 0 0 15px 5px #fff;
+  box-shadow: 0 0 10px 3px var(--effetCarrouselRadius);
   backface-visibility: hidden;
 }
 
@@ -972,6 +1007,7 @@ footer a:visited{
   background-size:auto;
   background-repeat: no-repeat;
   background-position: center;
+  opacity:.75;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -983,23 +1019,14 @@ footer a:visited{
   width: 180px;
   border-radius: 35px;
   backface-visibility: hidden;
-  box-shadow: 0 0 15px 5px #fff;
+  box-shadow: 0 0 10px 3px var(--effetCarrouselRadius);
   transform:translate(-50%,-50%) scale(1.2) rotateY(180deg);
+  
 }
 
 .carteAccueil:hover
 {
 box-shadow: 0 0 25px 10px #fffd;
-}
-
-#animauxCheckbox:checked ~ .carrouselAccueil, #dessinCheckbox:checked ~ .carrouselAccueil
-{
-  animation: rotationCarrouselHaut none;
-}
-
-#horreurCheckbox:checked ~ .carrouselAccueil, #sportCheckbox:checked ~ .carrouselAccueil
-{
-  animation: rotationCarrouselbas none;
 }
 
 .carteUne 
@@ -1040,21 +1067,84 @@ box-shadow: 0 0 25px 10px #fffd;
   transform: translate(-50%,-50%) rotateY(300deg) translateZ(205px);
 }
 
+/* LES BOUTONS DE SELCTIONS DE VIDEOS */
+
+/* .contAccueil label
+{
+  position: absolute;
+  top:50%;
+  left:0%;
+  transform: translate(-50%, -50%);
+  height: 15px;
+  width: 15px;
+}
+
+.flecheAccueil
+{
+  position: absolute;
+  left:0%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  border: 7px solid black;
+  border-bottom: none;
+  border-left:none;
+  height: 15px;
+  width: 15px;
+  transition: 0.8s;
+  cursor: pointer;
+}
+.flecheAccueil:nth-child(1)
+{
+  left:-12px;
+  top:50%;
+} */
+/* 
+#animauxCheckbox:checked ~ label .flecheAnimaux:nth-child(1)
+{
+  transform: translate(-50%, -50%) rotate(0deg);
+  border: 7px solid black;
+  height: 25px;
+  width: 20px;
+  border-top: none;
+  border-left:none;
+  border-bottom: none;
+}
+
+#animauxCheckbox:checked ~ label .flecheAnimaux:nth-child(2)
+{
+  transform: translate(-50%, -50%) rotate(0deg);
+  height: 25px;
+  width: 20px;
+  border: 7px solid black;
+  border-top: none;
+  border-right:none;
+  border-bottom: none;
+} */
+
+.contAccueil label:hover .flecheAccueil
+{
+  border: 8px solid black;
+  border-bottom: none;
+  border-left:none;
+}
+
+/* L'ANIMATION DU CARROUSEL */
+
 @keyframes rotationCarrouselHaut 
 {
   0%
   {
-    transform:translate(-50%,-50%) rotateY(0deg) translate3d(0px, 15px, 0px);
+    transform:translate(-50%,-50%) rotateY(0deg) translate3d(0px, 35px, 0px);
   }
 
   50%
   {
-    transform: translate(-50%,-50%) rotateY(180deg) translate3d(0px, 15px, 0px);
+    transform: translate(-50%,-50%) rotateY(180deg) translate3d(0px, 35px, 0px);
   }
 
   100%
   {
-    transform: translate(-50%,-50%) rotateY(360deg) translate3d(0px, 15px, 0px);
+    transform: translate(-50%,-50%) rotateY(360deg) translate3d(0px, 35px, 0px);
   }
 }
 
@@ -1062,18 +1152,28 @@ box-shadow: 0 0 25px 10px #fffd;
 {
   0%
   {
-    transform:translate(-50%,-50%) rotateY(0deg) translate3d(0px, -15px, 0px);
+    transform:translate(-50%,-50%) rotateY(0deg)  translate3d(0px, -35px, 0px);
   }
 
   50%
   {
-    transform: translate(-50%,-50%) rotateY(180deg) translate3d(0px, -15px, 0px);
+    transform: translate(-50%,-50%) rotateY(180deg)  translate3d(0px, -35px, 0px);
   }
 
   100%
   {
-    transform: translate(-50%,-50%) rotateY(360deg) translate3d(0px, -15px, 0px);
+    transform: translate(-50%,-50%) rotateY(360deg)  translate3d(0px, -35px, 0px);
   }
+}
+
+#animauxCheckbox:checked ~ .carrouselAccueil, #dessinCheckbox:checked ~ .carrouselAccueil
+{
+  animation: rotationCarrouselHaut none;
+}
+
+#horreurCheckbox:checked ~ .carrouselAccueil, #sportCheckbox:checked ~ .carrouselAccueil
+{
+  animation: rotationCarrouselbas none;
 }
 
 /* FIN PAGE D'ACCUEIL */
