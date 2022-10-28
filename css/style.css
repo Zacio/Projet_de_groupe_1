@@ -23,7 +23,7 @@
 
   --fondMax: #fffbee;
   --fondMed: rgb(252, 246, 217);
-  --fondMin: rgb(223, 183, 130);
+  --fondMin: rgb(6, 22, 82);
   --texteBleu: rgb(24, 46, 216);
   --bordureParagraphe: lightblue;
 
@@ -76,7 +76,7 @@
     --texteMin:bisque;
     --fondMax: rgb(20, 20, 20);
     --fondMed:rgb(20, 53, 85);
-    --fondMin:rgb(23, 28, 32);
+    --fondMin:rgb(11, 224, 232);
     --texteBleu: rgb(69, 89, 181);
     --bordureParagraphe: darkblue;
 
@@ -92,7 +92,6 @@
 
     --effetCarrousel:#32f6e9;
     --effetCarrouselRadius:#70f9f0;
-
     --logoBackfaceAccueil:url(../img/logoCarrouselSombre.png)
   }
 }
@@ -123,7 +122,7 @@
   --fondMax: #0e0c22;
 
   --fondMed:rgb(27, 51, 108);
-  --fondMin:rgb(23, 28, 32);
+  --fondMin:rgb(11, 224, 232);
   --texteBleu: rgb(69, 89, 181);
   --bordureParagraphe: darkblue;
 
@@ -908,6 +907,11 @@ footer a:visited{
     animation: rotationCarrouselSmartphone 20s infinite linear;
   }
 
+  #accueilBody .contAccueil .carrouselAccueil .carteAccueil:hover
+  {
+  box-shadow: 0 0 25px 10px var(--fondMin);
+  }
+
   #body #accueilBody .contAccueil .carrouselAccueil .carteAccueil
 {
   display: flex;
@@ -1213,7 +1217,7 @@ footer a:visited{
 
 .carteAccueil:hover
 {
-box-shadow: 0 0 25px 10px #fffd;
+box-shadow: 0 0 25px 10px var(--fondMin);
 }
 
 .carteUne 
